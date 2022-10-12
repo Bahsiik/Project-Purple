@@ -1,0 +1,11 @@
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\bin\Debug\Projet_Purple.exe.config
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\bin\Debug\Projet_Purple.exe
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\bin\Debug\Projet_Purple.pdb
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet Purple.csproj.AssemblyReference.cache
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet Purple.csproj.SuggestedBindingRedirects.cache
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.Properties.Resources.resources
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet Purple.csproj.GenerateResource.cache
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet Purple.csproj.CoreCompileInputs.cache
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.exe
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.pdb
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.Form1.resources

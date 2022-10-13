@@ -34,7 +34,6 @@
             this.player = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Timers.Timer();
             this.verticalPlatform = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mediumEnemyPlatform = new System.Windows.Forms.PictureBox();
             this.hardEnemyPlatform = new System.Windows.Forms.PictureBox();
             this.end = new System.Windows.Forms.PictureBox();
@@ -44,36 +43,33 @@
             this.powerUp = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.mediumEnemy = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.easyEnemyPlatform = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.horizontalPlatform = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.easyEnemy = new System.Windows.Forms.PictureBox();
             this.hardEnemy = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.debugLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemyPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardEnemyPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.end)).BeginInit();
@@ -82,30 +78,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemyPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -130,6 +123,7 @@
             // 
             // player
             // 
+            this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Blue;
             this.player.Location = new System.Drawing.Point(12, 530);
             this.player.Name = "player";
@@ -153,16 +147,6 @@
             this.verticalPlatform.TabIndex = 5;
             this.verticalPlatform.TabStop = false;
             this.verticalPlatform.Tag = "platform";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 360);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 30);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "platform";
             // 
             // mediumEnemyPlatform
             // 
@@ -256,16 +240,6 @@
             this.mediumEnemy.TabStop = false;
             this.mediumEnemy.Tag = "enemy";
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox9.Location = new System.Drawing.Point(64, 295);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox9.TabIndex = 29;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Tag = "coins";
-            // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Brown;
@@ -325,26 +299,6 @@
             this.pictureBox16.TabIndex = 35;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Tag = "coins";
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox17.Location = new System.Drawing.Point(700, 456);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox17.TabIndex = 36;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Tag = "coins";
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox18.Location = new System.Drawing.Point(700, 360);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox18.TabIndex = 37;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Tag = "coins";
             // 
             // pictureBox19
             // 
@@ -406,36 +360,6 @@
             this.pictureBox24.TabStop = false;
             this.pictureBox24.Tag = "coins";
             // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox21.Location = new System.Drawing.Point(138, 513);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox21.TabIndex = 45;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Tag = "coins";
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox25.Location = new System.Drawing.Point(293, 513);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox25.TabIndex = 46;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Tag = "coins";
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox26.Location = new System.Drawing.Point(451, 513);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox26.TabIndex = 47;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Tag = "coins";
-            // 
             // easyEnemy
             // 
             this.easyEnemy.BackColor = System.Drawing.Color.Orange;
@@ -459,7 +383,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 344);
+            this.pictureBox1.Location = new System.Drawing.Point(448, 406);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 39);
             this.pictureBox1.TabIndex = 51;
@@ -469,32 +393,71 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox5.Location = new System.Drawing.Point(182, 409);
+            this.pictureBox5.Location = new System.Drawing.Point(393, 475);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(150, 30);
             this.pictureBox5.TabIndex = 50;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "platform";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox6.Location = new System.Drawing.Point(418, 400);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox6.TabIndex = 53;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "coins";
-            // 
             // pictureBox13
             // 
+            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox13.Location = new System.Drawing.Point(366, 465);
+            this.pictureBox13.Location = new System.Drawing.Point(651, 454);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(150, 30);
             this.pictureBox13.TabIndex = 52;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Tag = "platform";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox18.Location = new System.Drawing.Point(700, 386);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox18.TabIndex = 37;
+            this.pictureBox18.TabStop = false;
+            this.pictureBox18.Tag = "coins";
+            // 
+            // debugLabel
+            // 
+            this.debugLabel.Location = new System.Drawing.Point(635, 532);
+            this.debugLabel.Name = "debugLabel";
+            this.debugLabel.Size = new System.Drawing.Size(166, 70);
+            this.debugLabel.TabIndex = 54;
+            this.debugLabel.Text = "label1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Brown;
+            this.pictureBox2.Location = new System.Drawing.Point(167, 493);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 30);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "platform";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox9.Location = new System.Drawing.Point(223, 426);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox9.TabIndex = 29;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "coins";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox6.Location = new System.Drawing.Point(700, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox6.TabIndex = 55;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "coins";
             // 
             // Form1
             // 
@@ -504,14 +467,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1259, 604);
             this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.debugLabel);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.hardEnemy);
             this.Controls.Add(this.easyEnemy);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox24);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox22);
@@ -519,7 +480,6 @@
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
@@ -553,7 +513,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemyPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardEnemyPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.end)).EndInit();
@@ -562,50 +521,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemyPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.PictureBox pictureBox6;
+
+        private System.Windows.Forms.Label debugLabel;
+        private System.Windows.Forms.PictureBox pictureBox9;
+
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox13;
 
         private System.Windows.Forms.PictureBox hardEnemy;
 
         private System.Windows.Forms.PictureBox mediumEnemy;
 
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.PictureBox pictureBox26;
-
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
@@ -614,6 +569,7 @@
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
 
+        
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox mediumEnemyPlatform;
 
@@ -627,7 +583,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox11;
 
         private System.Windows.Forms.PictureBox end;

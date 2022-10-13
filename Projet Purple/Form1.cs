@@ -21,76 +21,84 @@ namespace Projet_Purple
         }
 
         // Player variables
-        private bool _goLeft;
-        private bool _goRight;
-        private bool _jumping;
-        private int _jumpSpeed = 10;
-        private int _force = 8;
-        private bool _onGround;
+        private bool _goLeft, _goRight, _jumping, _onGround;
+        private int _force;
         private readonly Point _playerLocation;
 
         // Misc variables
         private int _score;
         private bool _getPowerUp;
+        private const int Gravity = 12;
 
         // Moving platforms
-        private int _verticalSpeed = 2;
-        private readonly Point _verticalPlatformLocation;
+        private int _verticalSpeed = 1;
         private int _horizontalSpeed = 2;
-        private readonly Point _horizontalPlatformLocation;
+        private readonly Point _verticalPlatformLocation, _horizontalPlatformLocation;
 
         // Enemies
         private int _easyEnemySpeed = 2;
-        private readonly Point _easyEnemyLocation;
         private int _mediumEnemySpeed = 3;
-        private readonly Point _mediumEnemyLocation;
         private int _hardEnemySpeed = 4;
-        private readonly Point _hardEnemyLocation;
+        private readonly Point _easyEnemyLocation, _mediumEnemyLocation, _hardEnemyLocation;
+
 
         // End game
-        private bool _win;
-        private bool _lose;
+        private bool _win, _lose;
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
             PlayerMovement();
             EnemyMovement();
             PlatformMovement();
-            
             ScoreManagement();
-            
+
+            debugLabel.Text = $"force: {_force}\nground {_onGround}";
+
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "platform")
                 {
                     x.BringToFront();
-                    if (player.Bounds.IntersectsWith(x.Bounds))
+                    /* It's checking if the player is touching a platform. */
+                    if (player.Bounds.IntersectsWith(x.Bounds) && player.Bottom < x.Top + 8)
                     {
-                        if (player.Top + player.Height < x.Top + (x.Height / 3))
-                        {
-                            _force = 8;
-                            player.Top = x.Top - player.Height;
-                            _onGround = true;
-                        }
+                        /* It's checking if the player is on the ground. */
+                        _jumping = false;
+                        _onGround = true;
+                        player.Top = x.Top - player.Height;
+                        _force = 0;
+                    }
+                    /* It's checking if the player touch the left side of a platform. */
+                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Right > x.Left && _goRight)
+                    {
+                        player.Left = x.Left - player.Width;
+                    }
+                    /* It's checking if the player touch the right side of a platform. */
+                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Left < x.Right && _goLeft)
+                    {
+                        player.Left = x.Right;
+                    }
+                    /* It's checking if the player touch the bottom of a platform. */
+                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Top < x.Top + x.Height)
+                    {
+                        player.Top = x.Top + x.Height;
+                        _force = 0;
                     }
                 }
 
                 if (x is PictureBox && (string)x.Tag == "enemy")
                 {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
+                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible && _getPowerUp)
                     {
-                        if (_getPowerUp)
-                        {
-                            x.Visible = false;
-                            _score += 1;
-                        }
-                        else
-                        {
-                            _lose = true;
-                            player.BackColor = Color.Gray;
-                            gameTimer.Stop();
-                            lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
-                        }
+                        x.Visible = false;
+                        _score += 1;
+                    }
+                    else if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
+                    {
+                        _lose = true;
+                        player.BackColor = Color.Gray;
+                        gameTimer.Stop();
+                        lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
                     }
                 }
 
@@ -114,8 +122,6 @@ namespace Projet_Purple
                 }
             }
 
-            
-
             if (player.Bounds.IntersectsWith(end.Bounds) && end.BackColor == Color.Chartreuse)
             {
                 _win = true;
@@ -123,32 +129,40 @@ namespace Projet_Purple
                 lblScore.Text = $"Score : {_score}\nYou won, press R to restart";
             }
 
-            if (player.Top + player.Height > this.ClientSize.Height + 60)
+            if (player.Top > this.ClientSize.Height)
             {
                 _lose = true;
                 lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
             }
-            
-            
         }
 
         private void PlayerMovement()
         {
-            player.Top += _jumpSpeed;
-            if (player.Left < 0) _goLeft = false;
-            if (player.Right > this.ClientSize.Width) _goRight = false;
-            if (_jumping && _force < 0) _jumping = false;
             if (_goLeft) player.Left -= 5;
             if (_goRight) player.Left += 5;
-            if (_jumping && _force > 0 && _onGround)
+
+            if (player.Left < 0) player.Left = 0;
+            if (player.Right > this.ClientSize.Width) player.Left = this.ClientSize.Width - player.Width;
+
+            if (_jumping)
             {
-                _jumpSpeed = -10;
-                _force -= 1;
+                _onGround = false;
+                player.Top -= _force;
+                _force--;
+                if (_force < -7)
+                {
+                    _force = -7;
+                }
             }
             else
             {
-                _jumpSpeed = 5;
                 _onGround = false;
+                _force--;
+                player.Top -= _force;
+                if (_force < -7)
+                {
+                    _force = -7;
+                }
             }
         }
 
@@ -165,10 +179,11 @@ namespace Projet_Purple
                         _goRight = true;
                         break;
                     case Keys.Space:
-                        if (!_jumping)
+                        if (_onGround)
                         {
                             _jumping = true;
                             _onGround = false;
+                            _force = Gravity;
                         }
 
                         break;
@@ -186,16 +201,13 @@ namespace Projet_Purple
                 case Keys.Right:
                     _goRight = false;
                     break;
-                case Keys.Space:
-                    _jumping = false;
-                    break;
                 case Keys.R:
                     if (_win || _lose) Restart();
                     break;
             }
         }
 
-        // Reload the game
+// Reload the game
         private void Restart()
         {
             gameTimer.Start();
@@ -215,18 +227,19 @@ namespace Projet_Purple
             verticalPlatform.Location = _verticalPlatformLocation;
             horizontalPlatform.Location = _horizontalPlatformLocation;
 
-            // set visibility
+            // Reset visibility
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "coins") x.Visible = true;
                 if (x is PictureBox && (string)x.Tag == "enemy") x.Visible = true;
             }
 
-            // reset powerUp
+            // Reset powerUp
             _getPowerUp = false;
             powerUp.Visible = false;
             player.BackColor = Color.Blue;
-            
+
+            // Reset end
             end.BackColor = Color.Black;
         }
 
@@ -236,13 +249,13 @@ namespace Projet_Purple
             lblScore.Text = _score < 10
                 ? $"Score : {_score}\nYou need at least 10 coins to open the gate"
                 : $"Score : {_score}\nThe gate is now open, you can end the game";
-            
+
             switch (_score)
             {
                 case 10:
                     end.BackColor = Color.Chartreuse;
                     break;
-                case 15:
+                case 15 when !_getPowerUp:
                     powerUp.Visible = true;
                     break;
                 case 20:
@@ -254,7 +267,7 @@ namespace Projet_Purple
         private void PlatformMovement()
         {
             verticalPlatform.Top += _verticalSpeed;
-            if (verticalPlatform.Top < 200 || verticalPlatform.Top > 435) _verticalSpeed = -_verticalSpeed;
+            if (verticalPlatform.Top < 175 || verticalPlatform.Top > 300) _verticalSpeed = -_verticalSpeed;
 
             horizontalPlatform.Left += _horizontalSpeed;
             if (horizontalPlatform.Left < 300 || horizontalPlatform.Left > 550) _horizontalSpeed = -_horizontalSpeed;

@@ -52,6 +52,12 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="menu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="menu.Designer.cs">
+          <DependentUpon>menu.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="Form1.resx">
@@ -80,10 +86,10 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\bylethIdle.gif" />
       <Content Include="Resources\bylethJump.gif" />
       <Content Include="Resources\bylethRunLeft.gif" />
       <Content Include="Resources\bylethRunRight.gif" />
-      <Content Include="Resources\idle.gif" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

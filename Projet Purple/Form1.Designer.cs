@@ -61,10 +61,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.debugLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.debugLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -124,17 +124,19 @@
             // player
             // 
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.player.BackColor = System.Drawing.Color.Blue;
-            this.player.Location = new System.Drawing.Point(12, 530);
+            this.player.BackColor = System.Drawing.Color.Transparent;
+            this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdle;
+            this.player.Location = new System.Drawing.Point(12, 504);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(29, 37);
+            this.player.Size = new System.Drawing.Size(50, 50);
+            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 4;
             this.player.TabStop = false;
             // 
             // gameTimer
             // 
             this.gameTimer.Enabled = true;
-            this.gameTimer.Interval = 15D;
+            this.gameTimer.Interval = 20D;
             this.gameTimer.SynchronizingObject = this;
             this.gameTimer.Elapsed += new System.Timers.ElapsedEventHandler(this.GameLoop);
             // 
@@ -421,18 +423,10 @@
             this.pictureBox18.TabStop = false;
             this.pictureBox18.Tag = "coins";
             // 
-            // debugLabel
-            // 
-            this.debugLabel.Location = new System.Drawing.Point(635, 532);
-            this.debugLabel.Name = "debugLabel";
-            this.debugLabel.Size = new System.Drawing.Size(166, 70);
-            this.debugLabel.TabIndex = 54;
-            this.debugLabel.Text = "label1";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox2.Location = new System.Drawing.Point(167, 493);
+            this.pictureBox2.Location = new System.Drawing.Point(176, 493);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 30);
             this.pictureBox2.TabIndex = 6;
@@ -459,6 +453,14 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "coins";
             // 
+            // debugLbl
+            // 
+            this.debugLbl.Location = new System.Drawing.Point(629, 510);
+            this.debugLbl.Name = "debugLbl";
+            this.debugLbl.Size = new System.Drawing.Size(153, 92);
+            this.debugLbl.TabIndex = 56;
+            this.debugLbl.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -466,8 +468,8 @@
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1259, 604);
+            this.Controls.Add(this.debugLbl);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.debugLabel);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
@@ -545,9 +547,11 @@
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Label debugLbl;
+
+
         private System.Windows.Forms.PictureBox pictureBox6;
 
-        private System.Windows.Forms.Label debugLabel;
         private System.Windows.Forms.PictureBox pictureBox9;
 
         private System.Windows.Forms.PictureBox pictureBox1;

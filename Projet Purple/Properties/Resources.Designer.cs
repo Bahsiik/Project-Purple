@@ -62,6 +62,16 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bylethIdle {
+            get {
+                object obj = ResourceManager.GetObject("bylethIdle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bylethJump {
             get {
                 object obj = ResourceManager.GetObject("bylethJump", resourceCulture);
@@ -85,16 +95,6 @@ namespace Projet_Purple.Properties {
         internal static System.Drawing.Bitmap bylethRunRight {
             get {
                 object obj = ResourceManager.GetObject("bylethRunRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap idle {
-            get {
-                object obj = ResourceManager.GetObject("idle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

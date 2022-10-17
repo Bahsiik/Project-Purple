@@ -21,7 +21,7 @@ namespace Projet_Purple
         }
 
         // Player variables
-        private bool _goLeft, _goRight, _jumping, _onGround;
+        private bool _goLeft, _goRight, _jumping, _onGround, _animRight, _animLeft, _animIdle;
         private int _force;
         private readonly Point _playerLocation;
 
@@ -29,6 +29,7 @@ namespace Projet_Purple
         private int _score;
         private bool _getPowerUp;
         private const int Gravity = 12;
+        private int index;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -48,41 +49,47 @@ namespace Projet_Purple
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
             PlayerMovement();
+            PlayerAnimation();
             EnemyMovement();
             PlatformMovement();
             ScoreManagement();
+            
+            debugLbl.Text = "_animRight: " + _animRight + "\n_animLeft: " + _animLeft + "\n_animIdle: " + _animIdle;
 
-            debugLabel.Text = $"force: {_force}\nground {_onGround}";
 
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "platform")
                 {
-                    x.BringToFront();
-                    /* It's checking if the player is touching a platform. */
-                    if (player.Bounds.IntersectsWith(x.Bounds) && player.Bottom < x.Top + 8)
+                    if (player.Bounds.IntersectsWith(x.Bounds))
                     {
-                        /* It's checking if the player is on the ground. */
-                        _jumping = false;
-                        _onGround = true;
-                        player.Top = x.Top - player.Height;
-                        _force = 0;
-                    }
-                    /* It's checking if the player touch the left side of a platform. */
-                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Right > x.Left && _goRight)
-                    {
-                        player.Left = x.Left - player.Width;
-                    }
-                    /* It's checking if the player touch the right side of a platform. */
-                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Left < x.Right && _goLeft)
-                    {
-                        player.Left = x.Right;
-                    }
-                    /* It's checking if the player touch the bottom of a platform. */
-                    else if (player.Bounds.IntersectsWith(x.Bounds) && player.Top < x.Top + x.Height)
-                    {
-                        player.Top = x.Top + x.Height;
-                        _force = 0;
+                        /* It's checking if the player is touching a platform. */
+                        if (player.Bottom < x.Top + 8)
+                        {
+                            /* It's checking if the player is on the ground. */
+                            _jumping = false;
+                            _onGround = true;
+                            player.Top = x.Top - player.Height;
+                            _force = 0;
+                        }
+                        /* It's checking if the player touch the left side of a platform. */
+                        else if (player.Right > x.Left && _goRight &&
+                                 player.Left < x.Left)
+                        {
+                            player.Left = x.Left - player.Width;
+                        }
+                        /* It's checking if the player touch the right side of a platform. */
+                        else if (player.Left < x.Right && _goLeft &&
+                                 player.Right > x.Right)
+                        {
+                            player.Left = x.Right;
+                        }
+                        /* It's checking if the player touch the bottom of a platform. */
+                        else if (player.Top < x.Top + x.Height)
+                        {
+                            player.Top = x.Top + x.Height;
+                            _force = 0;
+                        }
                     }
                 }
 
@@ -134,11 +141,54 @@ namespace Projet_Purple
                 _lose = true;
                 lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
             }
+
+            player.BringToFront();
+        }
+
+        private void PlayerAnimation()
+        {
+            index++;
+
+            if (_goLeft)
+            {
+                if (!_animLeft)
+                {
+                    _animLeft = true;
+                    _animIdle = _animRight = false;
+                    player.Image = Properties.Resources.bylethRunLeft;
+                }
+
+                if (index % 12 == 0)
+                {
+                    player.Image = Properties.Resources.bylethRunLeft;
+                }
+            }
+            else if (_goRight)
+            {
+                if (!_animRight)
+                {
+                    _animRight = true;
+                    _animIdle =_animLeft = false;
+                    player.Image = Properties.Resources.bylethRunRight;
+                }
+
+                if (index % 12 == 0)
+                {
+                    player.Image = Properties.Resources.bylethRunRight;
+                }
+            }
+            else if (!_animIdle)
+            {
+                _animLeft = _animRight = false;
+                _animIdle = true;
+                player.Image = Properties.Resources.bylethIdle;
+            }
         }
 
         private void PlayerMovement()
         {
             if (_goLeft) player.Left -= 5;
+
             if (_goRight) player.Left += 5;
 
             if (player.Left < 0) player.Left = 0;
@@ -149,9 +199,9 @@ namespace Projet_Purple
                 _onGround = false;
                 player.Top -= _force;
                 _force--;
-                if (_force < -7)
+                if (_force < -6)
                 {
-                    _force = -7;
+                    _force = -6;
                 }
             }
             else
@@ -159,9 +209,9 @@ namespace Projet_Purple
                 _onGround = false;
                 _force--;
                 player.Top -= _force;
-                if (_force < -7)
+                if (_force < -6)
                 {
-                    _force = -7;
+                    _force = -6;
                 }
             }
         }

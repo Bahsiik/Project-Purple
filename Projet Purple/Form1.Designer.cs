@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
@@ -212,10 +213,12 @@
             // 
             // powerUp
             // 
-            this.powerUp.BackColor = System.Drawing.Color.PaleGreen;
-            this.powerUp.Location = new System.Drawing.Point(26, 155);
+            this.powerUp.BackColor = System.Drawing.Color.Transparent;
+            this.powerUp.Image = ((System.Drawing.Image)(resources.GetObject("powerUp.Image")));
+            this.powerUp.Location = new System.Drawing.Point(29, 142);
             this.powerUp.Name = "powerUp";
             this.powerUp.Size = new System.Drawing.Size(38, 39);
+            this.powerUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.powerUp.TabIndex = 23;
             this.powerUp.TabStop = false;
             this.powerUp.Tag = "powerUp";

@@ -71,4 +71,13 @@
   <data name="bylethIdle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bylethIdle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bylethRunRightCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethRunRightCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethRunLeftCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethRunLeftCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethIdleCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethIdleCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

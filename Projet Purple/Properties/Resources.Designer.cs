@@ -72,6 +72,16 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bylethIdleCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethIdleCrest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bylethJump {
             get {
                 object obj = ResourceManager.GetObject("bylethJump", resourceCulture);
@@ -92,9 +102,29 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bylethRunLeftCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethRunLeftCrest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bylethRunRight {
             get {
                 object obj = ResourceManager.GetObject("bylethRunRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethRunRightCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethRunRightCrest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

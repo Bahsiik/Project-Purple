@@ -124,7 +124,6 @@ namespace Projet_Purple
                     {
                         x.Visible = false;
                         _getPowerUp = true;
-                        player.BackColor = Color.Purple;
                     }
                 }
             }
@@ -155,12 +154,12 @@ namespace Projet_Purple
                 {
                     _animLeft = true;
                     _animIdle = _animRight = false;
-                    player.Image = Properties.Resources.bylethRunLeft;
+                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunLeftCrest : Properties.Resources.bylethRunLeft;
                 }
 
                 if (index % 12 == 0)
                 {
-                    player.Image = Properties.Resources.bylethRunLeft;
+                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunLeftCrest : Properties.Resources.bylethRunLeft;
                 }
             }
             else if (_goRight)
@@ -169,19 +168,19 @@ namespace Projet_Purple
                 {
                     _animRight = true;
                     _animIdle =_animLeft = false;
-                    player.Image = Properties.Resources.bylethRunRight;
+                    player.Image = _getPowerUp ? Properties.Resources.bylethRunRightCrest : Properties.Resources.bylethRunRight;
                 }
 
                 if (index % 12 == 0)
                 {
-                    player.Image = Properties.Resources.bylethRunRight;
+                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunRightCrest : Properties.Resources.bylethRunRight;
                 }
             }
             else if (!_animIdle)
             {
                 _animLeft = _animRight = false;
                 _animIdle = true;
-                player.Image = Properties.Resources.bylethIdle;
+                player.Image = _getPowerUp ? Properties.Resources.bylethIdleCrest : Properties.Resources.bylethIdle;
             }
         }
 
@@ -287,7 +286,6 @@ namespace Projet_Purple
             // Reset powerUp
             _getPowerUp = false;
             powerUp.Visible = false;
-            player.BackColor = Color.Blue;
 
             // Reset end
             end.BackColor = Color.Black;

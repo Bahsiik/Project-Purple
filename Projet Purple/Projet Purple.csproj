@@ -87,9 +87,12 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\bylethIdle.gif" />
+      <Content Include="Resources\bylethIdleCrest.gif" />
       <Content Include="Resources\bylethJump.gif" />
       <Content Include="Resources\bylethRunLeft.gif" />
+      <Content Include="Resources\bylethRunLeftCrest.gif" />
       <Content Include="Resources\bylethRunRight.gif" />
+      <Content Include="Resources\bylethRunRightCrest.gif" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

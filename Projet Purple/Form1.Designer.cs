@@ -125,10 +125,10 @@
             // 
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdle;
+            this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdleCrest;
             this.player.Location = new System.Drawing.Point(12, 504);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(50, 50);
+            this.player.Size = new System.Drawing.Size(55, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 4;
             this.player.TabStop = false;
@@ -212,7 +212,7 @@
             // 
             // powerUp
             // 
-            this.powerUp.BackColor = System.Drawing.Color.Purple;
+            this.powerUp.BackColor = System.Drawing.Color.PaleGreen;
             this.powerUp.Location = new System.Drawing.Point(26, 155);
             this.powerUp.Name = "powerUp";
             this.powerUp.Size = new System.Drawing.Size(38, 39);

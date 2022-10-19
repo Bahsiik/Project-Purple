@@ -31,7 +31,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Timers.Timer();
             this.verticalPlatform = new System.Windows.Forms.PictureBox();
@@ -42,10 +41,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.powerUp = new System.Windows.Forms.PictureBox();
-            this.lblScore = new System.Windows.Forms.Label();
             this.mediumEnemy = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.easyEnemyPlatform = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -54,20 +51,21 @@
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.horizontalPlatform = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.easyEnemy = new System.Windows.Forms.PictureBox();
-            this.hardEnemy = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.debugLbl = new System.Windows.Forms.Label();
+            this.lblMission = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.hardEnemy = new System.Windows.Forms.PictureBox();
+            this.easyEnemy = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).BeginInit();
@@ -80,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.powerUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemyPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -89,49 +86,40 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox3.Location = new System.Drawing.Point(-7, 573);
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-7, 579);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(612, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(599, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "platform";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox4.Location = new System.Drawing.Point(854, 409);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(319, 30);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Tag = "platform";
             // 
             // player
             // 
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdleCrest;
             this.player.Location = new System.Drawing.Point(12, 504);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(55, 50);
+            this.player.Size = new System.Drawing.Size(51, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player.TabIndex = 4;
+            this.player.TabIndex = 66;
             this.player.TabStop = false;
             // 
             // gameTimer
@@ -153,20 +141,24 @@
             // 
             // mediumEnemyPlatform
             // 
-            this.mediumEnemyPlatform.BackColor = System.Drawing.Color.Brown;
-            this.mediumEnemyPlatform.Location = new System.Drawing.Point(-7, 224);
+            this.mediumEnemyPlatform.BackColor = System.Drawing.Color.Transparent;
+            this.mediumEnemyPlatform.Image = ((System.Drawing.Image)(resources.GetObject("mediumEnemyPlatform.Image")));
+            this.mediumEnemyPlatform.Location = new System.Drawing.Point(-7, 233);
             this.mediumEnemyPlatform.Name = "mediumEnemyPlatform";
             this.mediumEnemyPlatform.Size = new System.Drawing.Size(235, 30);
+            this.mediumEnemyPlatform.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mediumEnemyPlatform.TabIndex = 7;
             this.mediumEnemyPlatform.TabStop = false;
             this.mediumEnemyPlatform.Tag = "platform";
             // 
             // hardEnemyPlatform
             // 
-            this.hardEnemyPlatform.BackColor = System.Drawing.Color.Brown;
+            this.hardEnemyPlatform.BackColor = System.Drawing.Color.Transparent;
+            this.hardEnemyPlatform.Image = ((System.Drawing.Image)(resources.GetObject("hardEnemyPlatform.Image")));
             this.hardEnemyPlatform.Location = new System.Drawing.Point(-7, 62);
             this.hardEnemyPlatform.Name = "hardEnemyPlatform";
             this.hardEnemyPlatform.Size = new System.Drawing.Size(337, 30);
+            this.hardEnemyPlatform.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.hardEnemyPlatform.TabIndex = 26;
             this.hardEnemyPlatform.TabStop = false;
             this.hardEnemyPlatform.Tag = "platform";
@@ -215,62 +207,46 @@
             // 
             this.powerUp.BackColor = System.Drawing.Color.Transparent;
             this.powerUp.Image = ((System.Drawing.Image)(resources.GetObject("powerUp.Image")));
-            this.powerUp.Location = new System.Drawing.Point(29, 142);
+            this.powerUp.Location = new System.Drawing.Point(46, 451);
             this.powerUp.Name = "powerUp";
-            this.powerUp.Size = new System.Drawing.Size(38, 39);
+            this.powerUp.Size = new System.Drawing.Size(78, 72);
             this.powerUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.powerUp.TabIndex = 23;
             this.powerUp.TabStop = false;
             this.powerUp.Tag = "powerUp";
             this.powerUp.Visible = false;
             // 
-            // lblScore
-            // 
-            this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(951, 493);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(308, 110);
-            this.lblScore.TabIndex = 11;
-            this.lblScore.Tag = "score";
-            this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // mediumEnemy
             // 
-            this.mediumEnemy.BackColor = System.Drawing.Color.Tomato;
-            this.mediumEnemy.Location = new System.Drawing.Point(176, 194);
+            this.mediumEnemy.BackColor = System.Drawing.Color.Transparent;
+            this.mediumEnemy.Location = new System.Drawing.Point(107, 186);
             this.mediumEnemy.Name = "mediumEnemy";
-            this.mediumEnemy.Size = new System.Drawing.Size(30, 30);
+            this.mediumEnemy.Size = new System.Drawing.Size(42, 47);
+            this.mediumEnemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mediumEnemy.TabIndex = 28;
             this.mediumEnemy.TabStop = false;
             this.mediumEnemy.Tag = "enemy";
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Brown;
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(326, 233);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(279, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 30;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Tag = "platform";
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox12.Location = new System.Drawing.Point(854, 184);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(150, 30);
-            this.pictureBox12.TabIndex = 31;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Tag = "platform";
-            // 
             // easyEnemyPlatform
             // 
-            this.easyEnemyPlatform.BackColor = System.Drawing.Color.Brown;
+            this.easyEnemyPlatform.BackColor = System.Drawing.Color.Transparent;
+            this.easyEnemyPlatform.Image = ((System.Drawing.Image)(resources.GetObject("easyEnemyPlatform.Image")));
             this.easyEnemyPlatform.Location = new System.Drawing.Point(1060, 120);
             this.easyEnemyPlatform.Name = "easyEnemyPlatform";
             this.easyEnemyPlatform.Size = new System.Drawing.Size(199, 30);
+            this.easyEnemyPlatform.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.easyEnemyPlatform.TabIndex = 32;
             this.easyEnemyPlatform.TabStop = false;
             this.easyEnemyPlatform.Tag = "platform";
@@ -345,46 +321,6 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.Tag = "coins";
             // 
-            // pictureBox23
-            // 
-            this.pictureBox23.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox23.Location = new System.Drawing.Point(1107, 62);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox23.TabIndex = 42;
-            this.pictureBox23.TabStop = false;
-            this.pictureBox23.Tag = "coins";
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox24.Location = new System.Drawing.Point(1191, 62);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox24.TabIndex = 43;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Tag = "coins";
-            // 
-            // easyEnemy
-            // 
-            this.easyEnemy.BackColor = System.Drawing.Color.Orange;
-            this.easyEnemy.Location = new System.Drawing.Point(1060, 95);
-            this.easyEnemy.Name = "easyEnemy";
-            this.easyEnemy.Size = new System.Drawing.Size(30, 30);
-            this.easyEnemy.TabIndex = 48;
-            this.easyEnemy.TabStop = false;
-            this.easyEnemy.Tag = "enemy";
-            // 
-            // hardEnemy
-            // 
-            this.hardEnemy.BackColor = System.Drawing.Color.OrangeRed;
-            this.hardEnemy.Location = new System.Drawing.Point(217, 32);
-            this.hardEnemy.Name = "hardEnemy";
-            this.hardEnemy.Size = new System.Drawing.Size(30, 30);
-            this.hardEnemy.TabIndex = 49;
-            this.hardEnemy.TabStop = false;
-            this.hardEnemy.Tag = "enemy";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Yellow;
@@ -397,24 +333,15 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Brown;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(393, 475);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(150, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 50;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "platform";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox13.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox13.Location = new System.Drawing.Point(651, 454);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(150, 30);
-            this.pictureBox13.TabIndex = 52;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "platform";
             // 
             // pictureBox18
             // 
@@ -425,16 +352,6 @@
             this.pictureBox18.TabIndex = 37;
             this.pictureBox18.TabStop = false;
             this.pictureBox18.Tag = "coins";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox2.Location = new System.Drawing.Point(176, 493);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 30);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "platform";
             // 
             // pictureBox9
             // 
@@ -458,28 +375,126 @@
             // 
             // debugLbl
             // 
+            this.debugLbl.BackColor = System.Drawing.Color.Transparent;
             this.debugLbl.Location = new System.Drawing.Point(629, 510);
             this.debugLbl.Name = "debugLbl";
             this.debugLbl.Size = new System.Drawing.Size(153, 92);
             this.debugLbl.TabIndex = 56;
             this.debugLbl.Text = "label1";
             // 
+            // lblMission
+            // 
+            this.lblMission.BackColor = System.Drawing.Color.Transparent;
+            this.lblMission.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMission.ForeColor = System.Drawing.Color.Gold;
+            this.lblMission.Image = ((System.Drawing.Image)(resources.GetObject("lblMission.Image")));
+            this.lblMission.Location = new System.Drawing.Point(761, 9);
+            this.lblMission.Name = "lblMission";
+            this.lblMission.Size = new System.Drawing.Size(534, 70);
+            this.lblMission.TabIndex = 60;
+            this.lblMission.Text = "Texte de Mission";
+            this.lblMission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblScore
+            // 
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblScore.Location = new System.Drawing.Point(807, 471);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(359, 124);
+            this.lblScore.TabIndex = 61;
+            this.lblScore.Text = "label2";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(167, 493);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 62;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "platform";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(651, 453);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(150, 30);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 63;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Tag = "platform";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(854, 193);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(150, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 64;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "platform";
+            // 
+            // hardEnemy
+            // 
+            this.hardEnemy.BackColor = System.Drawing.Color.Transparent;
+            this.hardEnemy.Image = global::Projet_Purple.Properties.Resources.hardEnemyRight;
+            this.hardEnemy.Location = new System.Drawing.Point(266, 20);
+            this.hardEnemy.Name = "hardEnemy";
+            this.hardEnemy.Size = new System.Drawing.Size(30, 30);
+            this.hardEnemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hardEnemy.TabIndex = 67;
+            this.hardEnemy.TabStop = false;
+            this.hardEnemy.Tag = "enemy";
+            // 
+            // easyEnemy
+            // 
+            this.easyEnemy.BackColor = System.Drawing.Color.Transparent;
+            this.easyEnemy.Image = ((System.Drawing.Image)(resources.GetObject("easyEnemy.Image")));
+            this.easyEnemy.Location = new System.Drawing.Point(1061, 50);
+            this.easyEnemy.Name = "easyEnemy";
+            this.easyEnemy.Size = new System.Drawing.Size(30, 69);
+            this.easyEnemy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.easyEnemy.TabIndex = 68;
+            this.easyEnemy.TabStop = false;
+            this.easyEnemy.Tag = "enemy";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(873, 415);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(279, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "platform";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1259, 604);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.easyEnemy);
+            this.Controls.Add(this.hardEnemy);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.lblMission);
             this.Controls.Add(this.debugLbl);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.hardEnemy);
-            this.Controls.Add(this.easyEnemy);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.horizontalPlatform);
             this.Controls.Add(this.pictureBox20);
@@ -489,7 +504,6 @@
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.easyEnemyPlatform);
-            this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.mediumEnemy);
@@ -497,15 +511,13 @@
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.end);
             this.Controls.Add(this.hardEnemyPlatform);
             this.Controls.Add(this.mediumEnemyPlatform);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.verticalPlatform);
             this.Controls.Add(this.player);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
+            this.DoubleBuffered = true;
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -514,7 +526,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).EndInit();
@@ -527,7 +538,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.powerUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediumEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.easyEnemyPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -536,19 +546,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardEnemy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyEnemy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pictureBox4;
+
+        private System.Windows.Forms.PictureBox easyEnemy;
+
+        private System.Windows.Forms.PictureBox hardEnemy;
+
+        private System.Windows.Forms.Label lblScore;
+
+        private System.Windows.Forms.Label lblMission;
 
         private System.Windows.Forms.Label debugLbl;
 
@@ -561,8 +581,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox13;
 
-        private System.Windows.Forms.PictureBox hardEnemy;
-
         private System.Windows.Forms.PictureBox mediumEnemy;
 
         private System.Windows.Forms.PictureBox pictureBox14;
@@ -573,18 +591,13 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox horizontalPlatform;
         private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox24;
 
-        
+
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox mediumEnemyPlatform;
 
         private System.Windows.Forms.PictureBox pictureBox10;
 
-        private System.Windows.Forms.PictureBox easyEnemy;
-
-        private System.Windows.Forms.Label lblScore;
 
         private System.Windows.Forms.PictureBox powerUp;
 
@@ -604,7 +617,6 @@
         private System.Windows.Forms.PictureBox player;
 
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
 
         #endregion
     }

@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -29,7 +30,7 @@ namespace Projet_Purple
         private int _score;
         private bool _getPowerUp;
         private const int Gravity = 12;
-        private int index;
+        private int _index;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -37,9 +38,16 @@ namespace Projet_Purple
         private readonly Point _verticalPlatformLocation, _horizontalPlatformLocation;
 
         // Enemies
+        private int _enemyAnim;
         private int _easyEnemySpeed = 2;
+        private bool _easyEnemyLeft, _easyEnemyAnimLeft;
+        private bool _easyEnemyAnimRight = true;
         private int _mediumEnemySpeed = 3;
+        private bool _mediumEnemyLeft, _mediumEnemyAnimLeft;
+        private bool _mediumEnemyAnimRight = true;
         private int _hardEnemySpeed = 4;
+        private bool _hardEnemyLeft, _hardEnemyAnimLeft;
+        private bool _hardEnemyAnimRight = true;
         private readonly Point _easyEnemyLocation, _mediumEnemyLocation, _hardEnemyLocation;
 
 
@@ -51,10 +59,15 @@ namespace Projet_Purple
             PlayerMovement();
             PlayerAnimation();
             EnemyMovement();
+            EnemyAnimation();
             PlatformMovement();
             ScoreManagement();
+            lblMission.SendToBack();
+
             
-            debugLbl.Text = "_animRight: " + _animRight + "\n_animLeft: " + _animLeft + "\n_animIdle: " + _animIdle;
+
+
+            debugLbl.Text = "_animRight: " + _animRight + "\n_animLeft: " + _animLeft + "\n_animIdle: " + _animIdle+ "\n_hardEnemyLeft: " + _hardEnemyLeft;
 
 
             foreach (Control x in this.Controls)
@@ -144,9 +157,11 @@ namespace Projet_Purple
             player.BringToFront();
         }
 
+        
+
         private void PlayerAnimation()
         {
-            index++;
+            _index++;
 
             if (_goLeft)
             {
@@ -154,12 +169,16 @@ namespace Projet_Purple
                 {
                     _animLeft = true;
                     _animIdle = _animRight = false;
-                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunLeftCrest : Properties.Resources.bylethRunLeft;
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethRunLeftCrest
+                        : Properties.Resources.bylethRunLeft;
                 }
 
-                if (index % 12 == 0)
+                if (_index % 12 == 0)
                 {
-                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunLeftCrest : Properties.Resources.bylethRunLeft;
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethRunLeftCrest
+                        : Properties.Resources.bylethRunLeft;
                 }
             }
             else if (_goRight)
@@ -167,13 +186,17 @@ namespace Projet_Purple
                 if (!_animRight)
                 {
                     _animRight = true;
-                    _animIdle =_animLeft = false;
-                    player.Image = _getPowerUp ? Properties.Resources.bylethRunRightCrest : Properties.Resources.bylethRunRight;
+                    _animIdle = _animLeft = false;
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethRunRightCrest
+                        : Properties.Resources.bylethRunRight;
                 }
 
-                if (index % 12 == 0)
+                if (_index % 12 == 0)
                 {
-                    player.Image = _getPowerUp ?  Properties.Resources.bylethRunRightCrest : Properties.Resources.bylethRunRight;
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethRunRightCrest
+                        : Properties.Resources.bylethRunRight;
                 }
             }
             else if (!_animIdle)
@@ -331,12 +354,79 @@ namespace Projet_Purple
             mediumEnemy.Left += _mediumEnemySpeed;
             if (mediumEnemy.Left < mediumEnemyPlatform.Left ||
                 mediumEnemy.Left + mediumEnemy.Width > mediumEnemyPlatform.Left + mediumEnemyPlatform.Width)
+            {
+                _mediumEnemyLeft = !_mediumEnemyLeft;
                 _mediumEnemySpeed = -_mediumEnemySpeed;
+            }
 
             hardEnemy.Left += _hardEnemySpeed;
             if (hardEnemy.Left < hardEnemyPlatform.Left ||
                 hardEnemy.Left + hardEnemy.Width > hardEnemyPlatform.Left + hardEnemyPlatform.Width)
+            {
+                _hardEnemyLeft = !_hardEnemyLeft;
                 _hardEnemySpeed = -_hardEnemySpeed;
+            }
+        }
+        
+        private void EnemyAnimation()
+        {
+            _enemyAnim++;
+            if (_hardEnemyLeft)
+            {
+                if (!_hardEnemyAnimLeft)
+                {
+                    _hardEnemyAnimLeft = true;
+                    _hardEnemyAnimRight = false;
+                    hardEnemy.Image = Properties.Resources.hardEnemyLeft;
+                }
+                if (_enemyAnim % 24 == 0)
+                {
+                    hardEnemy.Image = Properties.Resources.hardEnemyLeft;
+                }
+            }
+            else
+            {
+                if (!_hardEnemyAnimRight)
+                {
+                    _hardEnemyAnimRight = true;
+                    _hardEnemyAnimLeft = false;
+                    hardEnemy.Image = Properties.Resources.hardEnemyRight;
+                }
+
+                if (_enemyAnim % 24 == 0)
+                {
+                    hardEnemy.Image = Properties.Resources.hardEnemyRight;
+                }
+            }
+            
+            //same for medium enemy
+            if (_mediumEnemyLeft)
+            {
+                if (!_mediumEnemyAnimLeft)
+                {
+                    _mediumEnemyAnimLeft = true;
+                    _mediumEnemyAnimRight = false;
+                    mediumEnemy.Image = Properties.Resources.mediumEnemyLeft;
+                }
+                if (_enemyAnim % 24 == 0)
+                {
+                    mediumEnemy.Image = Properties.Resources.mediumEnemyLeft;
+                }
+            }
+            else
+            {
+                if (!_mediumEnemyAnimRight)
+                {
+                    _mediumEnemyAnimRight = true;
+                    _mediumEnemyAnimLeft = false;
+                    mediumEnemy.Image = Properties.Resources.mediumEnemyRight;
+                }
+            
+                if (_enemyAnim % 24 == 0)
+                {
+                    mediumEnemy.Image = Properties.Resources.mediumEnemyRight;
+                }
+            }
         }
     }
 }

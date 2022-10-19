@@ -80,4 +80,16 @@
   <data name="bylethIdleCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bylethIdleCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hardEnemyLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardEnemyLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardEnemyRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardEnemyRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mediumEnemyLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mediumEnemyLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mediumEnemyRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mediumEnemyRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

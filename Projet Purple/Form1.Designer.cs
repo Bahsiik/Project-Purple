@@ -207,18 +207,19 @@
             // 
             this.powerUp.BackColor = System.Drawing.Color.Transparent;
             this.powerUp.Image = ((System.Drawing.Image)(resources.GetObject("powerUp.Image")));
-            this.powerUp.Location = new System.Drawing.Point(46, 451);
+            this.powerUp.Location = new System.Drawing.Point(56, 406);
             this.powerUp.Name = "powerUp";
             this.powerUp.Size = new System.Drawing.Size(78, 72);
             this.powerUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.powerUp.TabIndex = 23;
             this.powerUp.TabStop = false;
             this.powerUp.Tag = "powerUp";
-            this.powerUp.Visible = false;
+            this.powerUp.WaitOnLoad = true;
             // 
             // mediumEnemy
             // 
             this.mediumEnemy.BackColor = System.Drawing.Color.Transparent;
+            this.mediumEnemy.Image = global::Projet_Purple.Properties.Resources.mediumEnemyRight;
             this.mediumEnemy.Location = new System.Drawing.Point(107, 186);
             this.mediumEnemy.Name = "mediumEnemy";
             this.mediumEnemy.Size = new System.Drawing.Size(42, 47);

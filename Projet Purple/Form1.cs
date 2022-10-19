@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -31,6 +30,10 @@ namespace Projet_Purple
         private bool _getPowerUp;
         private const int Gravity = 12;
         private int _index;
+        private int _index2;
+        private int _index3;
+        private int _questDone;
+        private bool _dead, _deathAnim;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -40,124 +43,155 @@ namespace Projet_Purple
         // Enemies
         private int _enemyAnim;
         private int _easyEnemySpeed = 2;
-        private bool _easyEnemyLeft, _easyEnemyAnimLeft;
-        private bool _easyEnemyAnimRight = true;
-        private int _mediumEnemySpeed = 3;
+        private int _mediumEnemySpeed = 5;
         private bool _mediumEnemyLeft, _mediumEnemyAnimLeft;
         private bool _mediumEnemyAnimRight = true;
-        private int _hardEnemySpeed = 4;
+        private int _hardEnemySpeed = 7;
         private bool _hardEnemyLeft, _hardEnemyAnimLeft;
         private bool _hardEnemyAnimRight = true;
         private readonly Point _easyEnemyLocation, _mediumEnemyLocation, _hardEnemyLocation;
 
-
         // End game
         private bool _win, _lose;
 
+
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
-            PlayerMovement();
-            PlayerAnimation();
-            EnemyMovement();
-            EnemyAnimation();
-            PlatformMovement();
-            ScoreManagement();
+            if (!_dead)
+            {
+                PlayerMovement();
+                PlayerAnimation();
+                EnemyMovement();
+                EnemyAnimation();
+                PlatformMovement();
+                ScoreManagement();
+                QuestDone(_questDone);
+                foreach (Control x in this.Controls)
+                {
+                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
+                    {
+                        switch (x.Tag)
+                        {
+                            case "platform":
+                                PlatformInteraction(x);
+                                break;
+
+                            case "enemy":
+                                EnemyInteraction(x);
+                                break;
+
+                            case "coins":
+                                x.Visible = false;
+                                _score++;
+                                break;
+
+                            case "powerUp":
+                                x.Visible = false;
+                                _getPowerUp = true;
+                                _questDone = 2;
+                                break;
+                        }
+                    }
+                }
+
+                if (player.Bounds.IntersectsWith(end.Bounds) && end.BackColor == Color.Chartreuse)
+                {
+                    _win = true;
+                    gameTimer.Stop();
+                    lblScore.Text = $"Score : {_score}\nYou won, press R to restart";
+                }
+
+                if (player.Top > this.ClientSize.Height)
+                {
+                    _lose = true;
+                    lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
+                }
+            }
+            else if (_dead)
+            {
+                DeathAnimation();
+            }
+
             lblMission.SendToBack();
-
-            
-
-
-            debugLbl.Text = "_animRight: " + _animRight + "\n_animLeft: " + _animLeft + "\n_animIdle: " + _animIdle+ "\n_hardEnemyLeft: " + _hardEnemyLeft;
-
-
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox && (string)x.Tag == "platform")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds))
-                    {
-                        /* It's checking if the player is touching a platform. */
-                        if (player.Bottom < x.Top + 8)
-                        {
-                            /* It's checking if the player is on the ground. */
-                            _jumping = false;
-                            _onGround = true;
-                            player.Top = x.Top - player.Height;
-                            _force = 0;
-                        }
-                        /* It's checking if the player touch the left side of a platform. */
-                        else if (player.Right > x.Left && _goRight &&
-                                 player.Left < x.Left)
-                        {
-                            player.Left = x.Left - player.Width;
-                        }
-                        /* It's checking if the player touch the right side of a platform. */
-                        else if (player.Left < x.Right && _goLeft &&
-                                 player.Right > x.Right)
-                        {
-                            player.Left = x.Right;
-                        }
-                        /* It's checking if the player touch the bottom of a platform. */
-                        else if (player.Top < x.Top + x.Height)
-                        {
-                            player.Top = x.Top + x.Height;
-                            _force = 0;
-                        }
-                    }
-                }
-
-                if (x is PictureBox && (string)x.Tag == "enemy")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible && _getPowerUp)
-                    {
-                        x.Visible = false;
-                        _score += 1;
-                    }
-                    else if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
-                    {
-                        _lose = true;
-                        player.BackColor = Color.Gray;
-                        gameTimer.Stop();
-                        lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
-                    }
-                }
-
-                if (x is PictureBox && (string)x.Tag == "coins")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
-                    {
-                        x.Visible = false;
-                        _score++;
-                    }
-                }
-
-                if (x is PictureBox && (string)x.Tag == "powerUp")
-                {
-                    if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
-                    {
-                        x.Visible = false;
-                        _getPowerUp = true;
-                    }
-                }
-            }
-
-            if (player.Bounds.IntersectsWith(end.Bounds) && end.BackColor == Color.Chartreuse)
-            {
-                _win = true;
-                gameTimer.Stop();
-                lblScore.Text = $"Score : {_score}\nYou won, press R to restart";
-            }
-
-            if (player.Top > this.ClientSize.Height)
-            {
-                _lose = true;
-                lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
-            }
-
             player.BringToFront();
+
+
+            debugLbl.Text = "_index3: " + _index3 + "\n_dead: " + _dead + "_force" + _force;
         }
 
-        
+        private void DeathAnimation()
+        {
+            _index3++;
+            if (_index3 > 15)
+            {
+                player.Top -= _force;
+                _force--;
+                if (_force < -15)
+                {
+                    _force = -15;
+                }
+            }
+        }
+
+        private void EnemyInteraction(Control x)
+        {
+            if (_getPowerUp)
+            {
+                x.Visible = false;
+                _score += 1;
+            }
+            else
+            {
+                _lose = true;
+                player.BackColor = Color.Gray;
+                _dead = true;
+                _force = Gravity;
+                lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
+            }
+        }
+
+        private void PlatformInteraction(Control x)
+        {
+            if (player.Bottom < x.Top + 8)
+            {
+                _jumping = false;
+                _onGround = true;
+                player.Top = x.Top - player.Height;
+                if (!_dead)
+                {
+                    _force = 0;
+                }
+            }
+            else if (player.Right > x.Left && player.Left < x.Left - player.Width + 10 && _goRight &&
+                     x.Name != "verticalPlatform")
+            {
+                player.Left = x.Left - player.Width;
+            }
+            else if (player.Left < x.Right && player.Right > x.Right + player.Width - 10 && _goLeft &&
+                     x.Name != "verticalPlatform")
+            {
+                player.Left = x.Right;
+            }
+            else if (player.Top < x.Bottom && x.Name != "verticalPlatform")
+            {
+                player.Top = x.Top + x.Height;
+                _force = 0;
+            }
+        }
+
+        private void QuestDone(int quest)
+        {
+            switch (quest)
+            {
+                case 1:
+                    lblMission.Text = "You got all the coins, now go to the end to win !";
+                    break;
+                case 2:
+                    lblMission.Text = "You got the powerUp, you can now kill your enemy !";
+                    break;
+            }
+        }
+
 
         private void PlayerAnimation()
         {
@@ -279,7 +313,7 @@ namespace Projet_Purple
             }
         }
 
-// Reload the game
+        // Reload the game
         private void Restart()
         {
             gameTimer.Start();
@@ -367,7 +401,7 @@ namespace Projet_Purple
                 _hardEnemySpeed = -_hardEnemySpeed;
             }
         }
-        
+
         private void EnemyAnimation()
         {
             _enemyAnim++;
@@ -379,6 +413,7 @@ namespace Projet_Purple
                     _hardEnemyAnimRight = false;
                     hardEnemy.Image = Properties.Resources.hardEnemyLeft;
                 }
+
                 if (_enemyAnim % 24 == 0)
                 {
                     hardEnemy.Image = Properties.Resources.hardEnemyLeft;
@@ -398,7 +433,7 @@ namespace Projet_Purple
                     hardEnemy.Image = Properties.Resources.hardEnemyRight;
                 }
             }
-            
+
             //same for medium enemy
             if (_mediumEnemyLeft)
             {
@@ -408,6 +443,7 @@ namespace Projet_Purple
                     _mediumEnemyAnimRight = false;
                     mediumEnemy.Image = Properties.Resources.mediumEnemyLeft;
                 }
+
                 if (_enemyAnim % 24 == 0)
                 {
                     mediumEnemy.Image = Properties.Resources.mediumEnemyLeft;
@@ -421,7 +457,7 @@ namespace Projet_Purple
                     _mediumEnemyAnimLeft = false;
                     mediumEnemy.Image = Properties.Resources.mediumEnemyRight;
                 }
-            
+
                 if (_enemyAnim % 24 == 0)
                 {
                     mediumEnemy.Image = Properties.Resources.mediumEnemyRight;

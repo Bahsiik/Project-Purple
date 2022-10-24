@@ -132,6 +132,66 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bylethSupriseRight {
+            get {
+                object obj = ResourceManager.GetObject("bylethSupriseRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap closedDoor {
+            get {
+                object obj = ResourceManager.GetObject("closedDoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Crest_of_Flames {
+            get {
+                object obj = ResourceManager.GetObject("Crest_of_Flames", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crestAppear {
+            get {
+                object obj = ResourceManager.GetObject("crestAppear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deathFrame {
+            get {
+                object obj = ResourceManager.GetObject("deathFrame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap halfOpenDoor {
+            get {
+                object obj = ResourceManager.GetObject("halfOpenDoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hardEnemyLeft {
             get {
                 object obj = ResourceManager.GetObject("hardEnemyLeft", resourceCulture);
@@ -165,6 +225,16 @@ namespace Projet_Purple.Properties {
         internal static System.Drawing.Bitmap mediumEnemyRight {
             get {
                 object obj = ResourceManager.GetObject("mediumEnemyRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap openDoor {
+            get {
+                object obj = ResourceManager.GetObject("openDoor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

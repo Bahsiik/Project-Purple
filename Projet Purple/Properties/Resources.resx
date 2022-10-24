@@ -92,4 +92,25 @@
   <data name="mediumEnemyRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mediumEnemyRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bylethSupriseRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethSupriseRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deathFrame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deathFrame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="closedDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closedDoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="halfOpenDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\halfOpenDoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="openDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\openDoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Crest_of_Flames" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crest_of_Flames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crestAppear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crestAppear.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

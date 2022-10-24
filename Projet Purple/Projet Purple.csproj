@@ -93,8 +93,15 @@
       <Content Include="Resources\bylethRunLeftCrest.gif" />
       <Content Include="Resources\bylethRunRight.gif" />
       <Content Include="Resources\bylethRunRightCrest.gif" />
+      <Content Include="Resources\bylethSupriseRight.gif" />
+      <Content Include="Resources\closedDoor.png" />
+      <Content Include="Resources\crestAppear.gif" />
+      <Content Include="Resources\Crest_of_Flames.png" />
+      <Content Include="Resources\deathFrame.png" />
+      <Content Include="Resources\halfOpenDoor.png" />
       <Content Include="Resources\mediumEnemyLeft.gif" />
       <Content Include="Resources\mediumEnemyRight.gif" />
+      <Content Include="Resources\openDoor.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

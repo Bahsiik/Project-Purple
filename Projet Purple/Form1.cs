@@ -33,7 +33,8 @@ namespace Projet_Purple
         private int _index2;
         private int _index3;
         private int _questDone;
-        private bool _dead, _deathAnim;
+        private bool _dead;
+        private int _crestAppearIndex;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -57,6 +58,7 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
+            dbgLBL.Text = "index3: " + _index3 + "\nforce: " + _force;
             if (!_dead)
             {
                 PlayerMovement();
@@ -65,7 +67,16 @@ namespace Projet_Purple
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
-                QuestDone(_questDone);
+                if (_questDone != 0)
+                {
+                    QuestDone(_questDone);
+                }
+
+                if (powerUp.Visible)
+                {
+                    CrestAppearAnimation();
+                }
+
                 foreach (Control x in this.Controls)
                 {
                     if (player.Bounds.IntersectsWith(x.Bounds) && x.Visible)
@@ -80,47 +91,77 @@ namespace Projet_Purple
                                 EnemyInteraction(x);
                                 break;
 
-                            case "coins":
+                            case "coins1":
                                 x.Visible = false;
                                 _score++;
+                                break;
+
+                            case "coins5":
+                                x.Visible = false;
+                                _score += 5;
+                                break;
+
+                            case "coins10":
+                                x.Visible = false;
+                                _score += 10;
+                                break;
+
+                            case "coins25":
+                                x.Visible = false;
+                                _score += 25;
+                                break;
+
+                            case "coins50":
+                                x.Visible = false;
+                                _score += 50;
                                 break;
 
                             case "powerUp":
                                 x.Visible = false;
                                 _getPowerUp = true;
                                 _questDone = 2;
+                                _index2 = 0;
                                 break;
                         }
                     }
                 }
 
-                if (player.Bounds.IntersectsWith(end.Bounds) && end.BackColor == Color.Chartreuse)
+                if (player.Bounds.IntersectsWith(end.Bounds) && _score >= 100)
                 {
                     _win = true;
                     gameTimer.Stop();
-                    lblScore.Text = $"Score : {_score}\nYou won, press R to restart";
                 }
 
                 if (player.Top > this.ClientSize.Height)
                 {
                     _lose = true;
-                    lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
                 }
+
+                scoreLBL.Text = "Score: " + _score;
+                lblMission.SendToBack();
+                player.BringToFront();
+                horizontalPlatform.BringToFront();
+                verticalPlatform.BringToFront();
             }
             else if (_dead)
             {
                 DeathAnimation();
             }
-
-            lblMission.SendToBack();
-            player.BringToFront();
+        }
 
 
-            debugLbl.Text = "_index3: " + _index3 + "\n_dead: " + _dead + "_force" + _force;
+        private void CrestAppearAnimation()
+        {
+            _crestAppearIndex++;
+            if (_crestAppearIndex > 72)
+            {
+                powerUp.Image = Properties.Resources.Crest_of_Flames;
+            }
         }
 
         private void DeathAnimation()
         {
+            player.SendToBack();
             _index3++;
             if (_index3 > 15)
             {
@@ -143,36 +184,36 @@ namespace Projet_Purple
             else
             {
                 _lose = true;
-                player.BackColor = Color.Gray;
                 _dead = true;
+                player.Image = Properties.Resources.deathFrame;
                 _force = Gravity;
-                lblScore.Text = $"Score : {_score}\nYou died, press R to restart";
             }
         }
 
         private void PlatformInteraction(Control x)
         {
-            if (player.Bottom < x.Top + 8)
+            if (player.Bottom < x.Top + 8 && _force < 0 && !_dead)
             {
                 _jumping = false;
                 _onGround = true;
                 player.Top = x.Top - player.Height;
-                if (!_dead)
+                _force = 0;
+                if (x.Name == "horizontalPlatform")
                 {
-                    _force = 0;
+                    player.Left += _horizontalSpeed;
                 }
             }
             else if (player.Right > x.Left && player.Left < x.Left - player.Width + 10 && _goRight &&
-                     x.Name != "verticalPlatform")
+                     x.Name != "verticalPlatform" && x.Name != "horizontalPlatform")
             {
                 player.Left = x.Left - player.Width;
             }
             else if (player.Left < x.Right && player.Right > x.Right + player.Width - 10 && _goLeft &&
-                     x.Name != "verticalPlatform")
+                     x.Name != "verticalPlatform" && x.Name != "horizontalPlatform")
             {
                 player.Left = x.Right;
             }
-            else if (player.Top < x.Bottom && x.Name != "verticalPlatform")
+            else if (player.Top < x.Bottom && x.Name != "verticalPlatform" && x.Name != "horizontalPlatform" && !_dead)
             {
                 player.Top = x.Top + x.Height;
                 _force = 0;
@@ -184,12 +225,36 @@ namespace Projet_Purple
             switch (quest)
             {
                 case 1:
-                    lblMission.Text = "You got all the coins, now go to the end to win !";
+                    lblMission.Text = "The Fire Emblem has appeared!";
                     break;
                 case 2:
-                    lblMission.Text = "You got the powerUp, you can now kill your enemy !";
+                    lblMission.Text = "You got the Fire Emblem,\nyou can now kill your enemy!";
+                    break;
+                case 3:
+                    lblMission.Text = "You got all the rupees,\nyou can now go to the end!";
                     break;
             }
+
+            if (_index2 == 0 && quest != 0)
+            {
+                lblMission.Visible = true;
+                lblMission.Left = this.ClientSize.Width;
+            }
+            else if (_index2 > 0 && _index2 < 38)
+            {
+                lblMission.Left -= 10;
+            }
+            else if (_index2 > 130)
+            {
+                lblMission.Left += 10;
+            }
+
+            if (_index2 > 200)
+            {
+                _questDone = 0;
+            }
+
+            _index2++;
         }
 
 
@@ -320,6 +385,11 @@ namespace Projet_Purple
             _lose = false;
             _win = false;
             _score = 0;
+            _dead = false;
+            _animIdle = false;
+            _index3 = 0;
+            _index2 = 0;
+            _index = 0;
 
             // Reset player position
             player.Location = _playerLocation;
@@ -336,7 +406,11 @@ namespace Projet_Purple
             // Reset visibility
             foreach (Control x in this.Controls)
             {
-                if (x is PictureBox && (string)x.Tag == "coins") x.Visible = true;
+                if (x is PictureBox && (string)x.Tag == "coins1") x.Visible = true;
+                if (x is PictureBox && (string)x.Tag == "coins5") x.Visible = true;
+                if (x is PictureBox && (string)x.Tag == "coins10") x.Visible = true;
+                if (x is PictureBox && (string)x.Tag == "coins25") x.Visible = true;
+                if (x is PictureBox && (string)x.Tag == "coins50") x.Visible = true;
                 if (x is PictureBox && (string)x.Tag == "enemy") x.Visible = true;
             }
 
@@ -345,57 +419,49 @@ namespace Projet_Purple
             powerUp.Visible = false;
 
             // Reset end
-            end.BackColor = Color.Black;
+            end.Image = Properties.Resources.closedDoor;
         }
 
 
         private void ScoreManagement()
         {
-            lblScore.Text = _score < 10
-                ? $"Score : {_score}\nYou need at least 10 coins to open the gate"
-                : $"Score : {_score}\nThe gate is now open, you can end the game";
-
-            switch (_score)
+            if (_score >= 50 && !_getPowerUp)
             {
-                case 10:
-                    end.BackColor = Color.Chartreuse;
-                    break;
-                case 15 when !_getPowerUp:
-                    powerUp.Visible = true;
-                    break;
-                case 20:
-                    lblScore.Text = "You collected the 20 coins, go to the end to win !";
-                    break;
+                _questDone = 1;
+                powerUp.Visible = true;
+            }
+            else if (_score == 100)
+            {
+                _questDone = 3;
+                end.Image = Properties.Resources.openDoor;
             }
         }
 
         private void PlatformMovement()
         {
             verticalPlatform.Top += _verticalSpeed;
-            if (verticalPlatform.Top < 175 || verticalPlatform.Top > 300) _verticalSpeed = -_verticalSpeed;
+            if (verticalPlatform.Top < topFlag.Bottom || verticalPlatform.Bottom > bottomFlag.Top)
+                _verticalSpeed = -_verticalSpeed;
 
             horizontalPlatform.Left += _horizontalSpeed;
-            if (horizontalPlatform.Left < 300 || horizontalPlatform.Left > 550) _horizontalSpeed = -_horizontalSpeed;
+            if (horizontalPlatform.Left < 300 || horizontalPlatform.Left > 600) _horizontalSpeed = -_horizontalSpeed;
         }
 
         private void EnemyMovement()
         {
             easyEnemy.Left += _easyEnemySpeed;
-            if (easyEnemy.Left < easyEnemyPlatform.Left ||
-                easyEnemy.Left + easyEnemy.Width > easyEnemyPlatform.Left + easyEnemyPlatform.Width)
+            if (easyEnemy.Left < easyEnemyPlatform.Left || easyEnemy.Right > easyEnemyPlatform.Right)
                 _easyEnemySpeed = -_easyEnemySpeed;
 
             mediumEnemy.Left += _mediumEnemySpeed;
-            if (mediumEnemy.Left < mediumEnemyPlatform.Left ||
-                mediumEnemy.Left + mediumEnemy.Width > mediumEnemyPlatform.Left + mediumEnemyPlatform.Width)
+            if (mediumEnemy.Left < mediumEnemyPlatform.Left || mediumEnemy.Right > mediumEnemyPlatform.Right)
             {
                 _mediumEnemyLeft = !_mediumEnemyLeft;
                 _mediumEnemySpeed = -_mediumEnemySpeed;
             }
 
             hardEnemy.Left += _hardEnemySpeed;
-            if (hardEnemy.Left < hardEnemyPlatform.Left ||
-                hardEnemy.Left + hardEnemy.Width > hardEnemyPlatform.Left + hardEnemyPlatform.Width)
+            if (hardEnemy.Left < leftFlag.Right || hardEnemy.Right > rightFlag.Left)
             {
                 _hardEnemyLeft = !_hardEnemyLeft;
                 _hardEnemySpeed = -_hardEnemySpeed;

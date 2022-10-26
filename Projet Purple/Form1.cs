@@ -32,9 +32,10 @@ namespace Projet_Purple
         private int _index;
         private int _index2;
         private int _index3;
-        private int _questDone;
+        private int _quest;
         private bool _dead;
         private int _crestAppearIndex;
+        private bool _questDone1, _questDone2, _questDone3;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -44,10 +45,10 @@ namespace Projet_Purple
         // Enemies
         private int _enemyAnim;
         private int _easyEnemySpeed = 2;
-        private int _mediumEnemySpeed = 5;
+        private int _mediumEnemySpeed = 4;
         private bool _mediumEnemyLeft, _mediumEnemyAnimLeft;
         private bool _mediumEnemyAnimRight = true;
-        private int _hardEnemySpeed = 7;
+        private int _hardEnemySpeed = 6;
         private bool _hardEnemyLeft, _hardEnemyAnimLeft;
         private bool _hardEnemyAnimRight = true;
         private readonly Point _easyEnemyLocation, _mediumEnemyLocation, _hardEnemyLocation;
@@ -58,7 +59,6 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
-            dbgLBL.Text = "index3: " + _index3 + "\nforce: " + _force;
             if (!_dead)
             {
                 PlayerMovement();
@@ -67,9 +67,9 @@ namespace Projet_Purple
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
-                if (_questDone != 0)
+                if (_quest != 0)
                 {
-                    QuestDone(_questDone);
+                    QuestDone(_quest);
                 }
 
                 if (powerUp.Visible)
@@ -119,8 +119,13 @@ namespace Projet_Purple
                             case "powerUp":
                                 x.Visible = false;
                                 _getPowerUp = true;
-                                _questDone = 2;
-                                _index2 = 0;
+                                if (!_questDone2)
+                                {
+                                    _quest = 2;
+                                    _index2 = 0;
+                                    _questDone2 = true;
+                                }
+
                                 break;
                         }
                     }
@@ -129,12 +134,16 @@ namespace Projet_Purple
                 if (player.Bounds.IntersectsWith(end.Bounds) && _score >= 100)
                 {
                     _win = true;
+                    endLBL.Visible = true;
+                    endLBL.Text = "You win !\n(Press R to restart)";
                     gameTimer.Stop();
                 }
 
                 if (player.Top > this.ClientSize.Height)
                 {
                     _lose = true;
+                    endLBL.Visible = true;
+                    endLBL.Text = "You lose !\n(Press R to restart)";
                 }
 
                 scoreLBL.Text = "Score: " + _score;
@@ -146,9 +155,83 @@ namespace Projet_Purple
             else if (_dead)
             {
                 DeathAnimation();
+                endLBL.Visible = true;
+                endLBL.Text = "You lose !\n(Press R to restart)";
+                if (_quest != 0)
+                {
+                    QuestDone(_quest);
+                }
+                if (powerUp.Visible)
+                {
+                    CrestAppearAnimation();
+                }
             }
         }
 
+
+        private void QuestDone(int quest)
+        {
+            switch (quest)
+            {
+                case 1:
+                    lblMission.Text = "The Fire Emblem has appeared!";
+                    break;
+                case 2:
+                    lblMission.Text = "You got the Fire Emblem,\nyou can now kill your enemy!";
+                    break;
+                case 3:
+                    lblMission.Text = "You got all the rupees,\nyou can now go to the end!";
+                    break;
+            }
+
+            if (_index2 <= 1 && quest != 0)
+            {
+                lblMission.Visible = true;
+                lblMission.Left = this.ClientSize.Width;
+            }
+            else if (_index2 > 0 && _index2 < 38)
+            {
+                lblMission.Left -= 10;
+            }
+            else if (_index2 > 130)
+            {
+                lblMission.Left += 10;
+            }
+            if (_index2 > 200)
+            {
+                _quest = 0;
+                _index2 = 0;
+            }
+
+            _index2++;
+        }
+
+        private void ScoreManagement()
+        {
+            if (_score >= 50 && !_getPowerUp)
+            {
+                if (!_questDone1)
+                {
+                    _quest = 1;
+                    _index2 = 0;
+                    _questDone1 = true;
+                }
+
+                powerUp.Visible = true;
+            }
+
+            if (_score > 100)
+            {
+                if (!_questDone3)
+                {
+                    _quest = 3;
+                    _index2 = 0;
+                    _questDone3 = true;
+                }
+
+                end.Image = Properties.Resources.openDoor;
+            }
+        }
 
         private void CrestAppearAnimation()
         {
@@ -218,43 +301,6 @@ namespace Projet_Purple
                 player.Top = x.Top + x.Height;
                 _force = 0;
             }
-        }
-
-        private void QuestDone(int quest)
-        {
-            switch (quest)
-            {
-                case 1:
-                    lblMission.Text = "The Fire Emblem has appeared!";
-                    break;
-                case 2:
-                    lblMission.Text = "You got the Fire Emblem,\nyou can now kill your enemy!";
-                    break;
-                case 3:
-                    lblMission.Text = "You got all the rupees,\nyou can now go to the end!";
-                    break;
-            }
-
-            if (_index2 == 0 && quest != 0)
-            {
-                lblMission.Visible = true;
-                lblMission.Left = this.ClientSize.Width;
-            }
-            else if (_index2 > 0 && _index2 < 38)
-            {
-                lblMission.Left -= 10;
-            }
-            else if (_index2 > 130)
-            {
-                lblMission.Left += 10;
-            }
-
-            if (_index2 > 200)
-            {
-                _questDone = 0;
-            }
-
-            _index2++;
         }
 
 
@@ -390,6 +436,10 @@ namespace Projet_Purple
             _index3 = 0;
             _index2 = 0;
             _index = 0;
+            endLBL.Visible = false;
+            _questDone1 = _questDone2 = _questDone3 = false;
+            _quest = 0;
+            lblMission.Visible = false;
 
             // Reset player position
             player.Location = _playerLocation;
@@ -422,20 +472,6 @@ namespace Projet_Purple
             end.Image = Properties.Resources.closedDoor;
         }
 
-
-        private void ScoreManagement()
-        {
-            if (_score >= 50 && !_getPowerUp)
-            {
-                _questDone = 1;
-                powerUp.Visible = true;
-            }
-            else if (_score == 100)
-            {
-                _questDone = 3;
-                end.Image = Properties.Resources.openDoor;
-            }
-        }
 
         private void PlatformMovement()
         {

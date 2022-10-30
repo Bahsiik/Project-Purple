@@ -99,6 +99,14 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\button.png" />
+      <Content Include="Resources\buttonBack.png" />
+      <Content Include="Resources\buttonBackLow.png" />
+      <Content Include="Resources\buttonGray.png" />
+      <Content Include="Resources\buttonOption.png" />
+      <Content Include="Resources\buttonOptionLow.png" />
+      <Content Include="Resources\buttonQuit.png" />
+      <Content Include="Resources\buttonQuitLow.png" />
       <Content Include="Resources\bylethFIdle.gif" />
       <Content Include="Resources\bylethFIdleCrest.gif" />
       <Content Include="Resources\bylethFPortrait.png" />
@@ -125,9 +133,16 @@
       <Content Include="Resources\deathFrame.png" />
       <Content Include="Resources\halfOpenDoor.png" />
       <Content Include="Resources\heart.png" />
+      <Content Include="Resources\mainButton.png" />
+      <Content Include="Resources\mainButtonText.png" />
+      <Content Include="Resources\mainButtonTextLow.png" />
       <Content Include="Resources\mediumEnemyLeft.gif" />
       <Content Include="Resources\mediumEnemyRight.gif" />
       <Content Include="Resources\openDoor.png" />
+      <Content Include="Resources\titleBackground1.png" />
+      <Content Include="Resources\titleBackground1Blur.jpg" />
+      <Content Include="Resources\titleBackground2.png" />
+      <Content Include="Resources\titleBackground2Blur.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

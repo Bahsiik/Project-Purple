@@ -28,7 +28,7 @@ namespace Projet_Purple
             BylethF.Image = Properties.Resources.bylethFPortraitGray;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void BylethF_Click(object sender, EventArgs e)
         {
             Appearance = "BylethF";
             BylethM.Image = Properties.Resources.bylethPortraitGray;
@@ -43,7 +43,7 @@ namespace Projet_Purple
             }
         }
 
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        private void BylethF_MouseEnter(object sender, EventArgs e)
         {
             if (Appearance != "BylethF")
             {
@@ -65,6 +65,16 @@ namespace Projet_Purple
             {
                 BylethF.Image = Properties.Resources.bylethFPortraitGray;
             }
+        }
+
+        private void BackButton_Enter(object sender, EventArgs e)
+        {
+            backButton.Image = Properties.Resources.buttonBack;
+        }
+
+        private void BackButton_Leave(object sender, EventArgs e)
+        {
+            backButton.Image = Properties.Resources.buttonBackLow;
         }
     }
 }

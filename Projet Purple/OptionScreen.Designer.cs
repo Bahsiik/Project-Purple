@@ -39,11 +39,12 @@ namespace Projet_Purple
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.BylethM = new System.Windows.Forms.PictureBox();
             this.BylethF = new System.Windows.Forms.PictureBox();
+            this.backButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BylethM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BylethF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,18 +119,9 @@ namespace Projet_Purple
             this.label8.TabIndex = 7;
             this.label8.Text = "Choose your character";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(424, 599);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 105);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.BackMenuButton);
-            // 
             // BylethM
             // 
+            this.BylethM.BackColor = System.Drawing.Color.Transparent;
             this.BylethM.Image = global::Projet_Purple.Properties.Resources.bylethPortrait;
             this.BylethM.Location = new System.Drawing.Point(660, 184);
             this.BylethM.Name = "BylethM";
@@ -143,6 +135,7 @@ namespace Projet_Purple
             // 
             // BylethF
             // 
+            this.BylethF.BackColor = System.Drawing.Color.Transparent;
             this.BylethF.Image = global::Projet_Purple.Properties.Resources.bylethFPortraitGray;
             this.BylethF.Location = new System.Drawing.Point(943, 184);
             this.BylethF.Name = "BylethF";
@@ -150,19 +143,35 @@ namespace Projet_Purple
             this.BylethF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BylethF.TabIndex = 13;
             this.BylethF.TabStop = false;
-            this.BylethF.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.BylethF.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.BylethF.Click += new System.EventHandler(this.BylethF_Click);
+            this.BylethF.MouseEnter += new System.EventHandler(this.BylethF_MouseEnter);
             this.BylethF.MouseLeave += new System.EventHandler(this.BylethF_MouseLeave);
+            // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Image = global::Projet_Purple.Properties.Resources.buttonBackLow;
+            this.backButton.Location = new System.Drawing.Point(310, 614);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(559, 98);
+            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backButton.TabIndex = 15;
+            this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.BackMenuButton);
+            this.backButton.MouseEnter += new System.EventHandler(this.BackButton_Enter);
+            this.backButton.MouseLeave += new System.EventHandler(this.BackButton_Leave);
             // 
             // OptionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Projet_Purple.Properties.Resources.titleBackground1Blur;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1251, 768);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.BylethF);
             this.Controls.Add(this.BylethM);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -176,8 +185,11 @@ namespace Projet_Purple
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.BylethM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BylethF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox backButton;
 
         private System.Windows.Forms.PictureBox BylethF;
 
@@ -188,7 +200,6 @@ namespace Projet_Purple
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

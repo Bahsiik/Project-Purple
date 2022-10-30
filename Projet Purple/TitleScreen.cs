@@ -30,5 +30,38 @@ namespace Projet_Purple
             Application.Exit();
         }
 
+        
+
+        private void StartButton_Enter(object sender, EventArgs e)
+        {
+            startButton.Image = Properties.Resources.mainButtonText;
+        }
+        
+        private void StartButton_Leave(object sender, EventArgs e)
+        {
+            startButton.Image = Properties.Resources.mainButtonTextLow;
+        }
+
+        private void OptionButton_Enter(object sender, EventArgs e)
+        {
+            optionButton.Image = Properties.Resources.buttonOption;
+        }
+        
+        private void OptionButton_Leave(object sender, EventArgs e)
+        {
+            optionButton.Image = Properties.Resources.buttonOptionLow;
+        }
+        
+        private void QuitButton_Enter(object sender, EventArgs e)
+        {
+            quitButton.Image = Properties.Resources.buttonQuit;
+        }
+        
+        private void QuitButton_Leave(object sender, EventArgs e)
+        {
+            quitButton.Image = Properties.Resources.buttonQuitLow;
+        }
+
+        
     }
 }

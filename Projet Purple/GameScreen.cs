@@ -60,6 +60,7 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
+            label1.Text = "Gender: " + OptionScreen.Appearance;
             if (!_dead)
             {
                 PlayerMovement();

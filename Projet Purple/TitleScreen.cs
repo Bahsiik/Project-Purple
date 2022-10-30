@@ -6,7 +6,6 @@ namespace Projet_Purple
     public partial class TitleScreen : Form
     {
         
-        private readonly GameScreen  _gameScreen = new GameScreen();
         private readonly OptionScreen  _optionScreen = new OptionScreen();
         public TitleScreen()
         {
@@ -15,7 +14,8 @@ namespace Projet_Purple
 
         private void StartGame(object sender, EventArgs e)
         {
-            _gameScreen.Show();
+            var gameScreen = new GameScreen();
+            gameScreen.Show();
             this.Hide();
         }
         

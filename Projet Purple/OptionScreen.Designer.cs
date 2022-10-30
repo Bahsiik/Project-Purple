@@ -124,6 +124,7 @@ namespace Projet_Purple
             this.button1.TabIndex = 8;
             this.button1.Text = "Byleth (M)";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AppearanceBylethMClick);
             // 
             // button2
             // 
@@ -133,6 +134,7 @@ namespace Projet_Purple
             this.button2.TabIndex = 9;
             this.button2.Text = "Byleth (F)";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.AppearanceBylethFClick);
             // 
             // button3
             // 

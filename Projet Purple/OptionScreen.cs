@@ -2,9 +2,9 @@
 
 namespace Projet_Purple
 {
-    public partial class menu : Form
+    public partial class OptionScreen : Form
     {
-        public menu()
+        public OptionScreen()
         {
             InitializeComponent();
         }

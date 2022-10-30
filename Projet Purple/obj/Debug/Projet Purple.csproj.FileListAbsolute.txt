@@ -8,5 +8,6 @@ C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debu
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet Purple.csproj.CoreCompileInputs.cache
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.exe
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.pdb
-C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.Form1.resources
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.TitleScreen.resources
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.OptionScreen.resources
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.GameScreen.resources

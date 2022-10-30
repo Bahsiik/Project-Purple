@@ -70,6 +70,9 @@
         <EmbeddedResource Include="GameScreen.resx">
           <DependentUpon>GameScreen.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="OptionScreen.resx">
+          <DependentUpon>OptionScreen.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>

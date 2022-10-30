@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class Form1 : Form
+    public partial class GameScreen : Form
     {
-        public Form1()
+        public GameScreen()
         {
             InitializeComponent();
 
@@ -60,7 +60,6 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
-            label1.Text = "Life: " + _life;
             if (!_dead)
             {
                 PlayerMovement();

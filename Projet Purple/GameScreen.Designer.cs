@@ -1,6 +1,6 @@
 ﻿namespace Projet_Purple
 {
-    partial class Form1
+    partial class GameScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Timers.Timer();
@@ -123,7 +123,7 @@
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::Projet_Purple.Properties.Resources.deathFrame;
-            this.player.Location = new System.Drawing.Point(21, 662);
+            this.player.Location = new System.Drawing.Point(40, 530);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(50, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -559,7 +559,7 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "label1";
             // 
-            // Form1
+            // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -610,7 +610,7 @@
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "GameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "coins";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);

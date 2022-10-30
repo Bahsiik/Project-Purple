@@ -71,10 +71,6 @@
             this.pauseResumeButton = new System.Windows.Forms.PictureBox();
             this.pauseMenuButton = new System.Windows.Forms.PictureBox();
             this.pauseLeaveButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -114,10 +110,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pauseResumeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseMenuButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseLeaveButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +130,7 @@
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdle;
-            this.player.Location = new System.Drawing.Point(228, 165);
+            this.player.Location = new System.Drawing.Point(12, 644);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(50, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -610,54 +602,6 @@
             this.pauseLeaveButton.MouseEnter += new System.EventHandler(this.pauseLeaveButton_MouseEnter);
             this.pauseLeaveButton.MouseLeave += new System.EventHandler(this.pauseLeaveButton_MouseLeave);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(32, 173);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 102;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "coins25";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(77, 173);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 103;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "coins25";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(123, 176);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 104;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "coins25";
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(172, 173);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 105;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Tag = "coins25";
-            // 
             // pictureBox21
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
@@ -678,10 +622,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1263, 780);
             this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pauseLeaveButton);
             this.Controls.Add(this.pauseMenuButton);
             this.Controls.Add(this.pauseResumeButton);
@@ -770,20 +710,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pauseResumeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseMenuButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseLeaveButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.PictureBox pictureBox21;
-
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox15;
 
         private System.Windows.Forms.PictureBox pauseMenuButton;
         private System.Windows.Forms.PictureBox pauseLeaveButton;

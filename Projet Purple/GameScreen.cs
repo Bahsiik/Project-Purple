@@ -255,6 +255,9 @@ namespace Projet_Purple
                                 pauseResumeButton.Visible = true;
                                 pauseMenuButton.Visible = true;
                                 pauseLeaveButton.Visible = true;
+                                pauseResumeButton.BringToFront();
+                                pauseMenuButton.BringToFront();
+                                pauseLeaveButton.BringToFront();
                             }
                             else
                             {

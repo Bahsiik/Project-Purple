@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class TitleScreen : Form
+    public sealed partial class TitleScreen : Form
     {
         
         private readonly OptionScreen  _optionScreen = new OptionScreen();

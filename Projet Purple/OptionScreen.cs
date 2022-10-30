@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class OptionScreen : Form
+    public sealed partial class OptionScreen : Form
     {
         public static string Appearance = "BylethM";
         

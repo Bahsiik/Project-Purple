@@ -73,6 +73,12 @@
         <Compile Include="TitleScreen.Designer.cs">
           <DependentUpon>TitleScreen.cs</DependentUpon>
         </Compile>
+        <Compile Include="WinScreen.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="WinScreen.Designer.cs">
+          <DependentUpon>WinScreen.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="GameOver.resx">
           <DependentUpon>GameOver.cs</DependentUpon>
         </EmbeddedResource>
@@ -93,6 +99,9 @@
         </Compile>
         <EmbeddedResource Include="TitleScreen.resx">
           <DependentUpon>TitleScreen.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="WinScreen.resx">
+          <DependentUpon>WinScreen.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,6 +168,7 @@
       <Content Include="Resources\gameOverTitle.png" />
       <Content Include="Resources\halfOpenDoor.png" />
       <Content Include="Resources\heart.png" />
+      <Content Include="Resources\looseBackground.png" />
       <Content Include="Resources\mainButton.png" />
       <Content Include="Resources\mainButtonText.png" />
       <Content Include="Resources\mainButtonTextLow.png" />
@@ -171,6 +181,9 @@
       <Content Include="Resources\titleBackground1Blur.jpg" />
       <Content Include="Resources\titleBackground2.png" />
       <Content Include="Resources\titleBackground2Blur.jpg" />
+      <Content Include="Resources\winBackgroundF.png" />
+      <Content Include="Resources\winBackgroundM.png" />
+      <Content Include="Resources\winTitle.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

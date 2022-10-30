@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class GameScreen : Form
+    public sealed partial class GameScreen : Form
     {
         public GameScreen()
         {
@@ -131,9 +131,10 @@ namespace Projet_Purple
                 if (player.Bounds.IntersectsWith(end.Bounds) && _score >= 100)
                 {
                     _win = true;
-                    endLBL.Visible = true;
-                    endLBL.Text = "You win !\n(Press R to restart)";
                     gameTimer.Stop();
+                    var winScreen = new WinScreen();
+                    winScreen.Show();
+                    Hide();
                 }
 
                 if (player.Top > this.ClientSize.Height)
@@ -197,9 +198,9 @@ namespace Projet_Purple
             {
                 case 0:
                     _lose = true;
+                    gameTimer.Stop();
                     var gameOver = new GameOver();
                     gameOver.Show();
-                    gameTimer.Stop();
                     Hide();
                     break;
                 case 1:

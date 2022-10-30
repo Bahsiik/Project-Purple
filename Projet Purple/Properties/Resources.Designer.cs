@@ -552,6 +552,16 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap looseBackground {
+            get {
+                object obj = ResourceManager.GetObject("looseBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mainButton {
             get {
                 object obj = ResourceManager.GetObject("mainButton", resourceCulture);
@@ -665,6 +675,36 @@ namespace Projet_Purple.Properties {
         internal static System.Drawing.Bitmap titleBackground2Blur {
             get {
                 object obj = ResourceManager.GetObject("titleBackground2Blur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winBackgroundF {
+            get {
+                object obj = ResourceManager.GetObject("winBackgroundF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winBackgroundM {
+            get {
+                object obj = ResourceManager.GetObject("winBackgroundM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winTitle {
+            get {
+                object obj = ResourceManager.GetObject("winTitle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

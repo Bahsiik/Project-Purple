@@ -45,6 +45,7 @@ namespace Projet_Purple
             // gameOverTitle
             // 
             this.gameOverTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
+            this.gameOverTitle.BackColor = System.Drawing.Color.Transparent;
             this.gameOverTitle.Image = global::Projet_Purple.Properties.Resources.gameOverTitle;
             this.gameOverTitle.Location = new System.Drawing.Point(30, 18);
             this.gameOverTitle.Name = "gameOverTitle";
@@ -55,8 +56,9 @@ namespace Projet_Purple
             // 
             // tipLabel
             // 
+            this.tipLabel.BackColor = System.Drawing.Color.Transparent;
             this.tipLabel.Font = new System.Drawing.Font("Britannic Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.tipLabel.ForeColor = System.Drawing.Color.Black;
             this.tipLabel.Location = new System.Drawing.Point(81, 382);
             this.tipLabel.Name = "tipLabel";
             this.tipLabel.Size = new System.Drawing.Size(1126, 66);
@@ -107,6 +109,8 @@ namespace Projet_Purple
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = global::Projet_Purple.Properties.Resources.looseBackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1271, 768);
             this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.buttonLeave);

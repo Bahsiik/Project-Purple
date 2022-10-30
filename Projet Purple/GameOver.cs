@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class GameOver : Form
+    public sealed partial class GameOver : Form
     {
         public GameOver()
         {
@@ -19,7 +19,6 @@ namespace Projet_Purple
             if (_index <= 1)
             {
                 gameOverTitle.Visible = true;
-                // set the gameovertitle bottom to 0
                 gameOverTitle.Top = 150 - gameOverTitle.Height;
             }
             if (gameOverTitle.Top + gameOverTitle.Height < 300)

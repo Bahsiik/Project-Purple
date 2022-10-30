@@ -62,6 +62,66 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bylethFIdle {
+            get {
+                object obj = ResourceManager.GetObject("bylethFIdle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethFIdleCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethFIdleCrest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethFRunLeft {
+            get {
+                object obj = ResourceManager.GetObject("bylethFRunLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethFRunLeftCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethFRunLeftCrest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethFRunRight {
+            get {
+                object obj = ResourceManager.GetObject("bylethFRunRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bylethFRunRightCrest {
+            get {
+                object obj = ResourceManager.GetObject("bylethFRunRightCrest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bylethIdle {
             get {
                 object obj = ResourceManager.GetObject("bylethIdle", resourceCulture);

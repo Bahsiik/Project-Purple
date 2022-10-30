@@ -99,6 +99,12 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\bylethFIdle.gif" />
+      <Content Include="Resources\bylethFIdleCrest.gif" />
+      <Content Include="Resources\bylethFRunLeft.gif" />
+      <Content Include="Resources\bylethFRunLeftCrest.gif" />
+      <Content Include="Resources\bylethFRunRight.gif" />
+      <Content Include="Resources\bylethFRunRightCrest.gif" />
       <Content Include="Resources\bylethIdle.gif" />
       <Content Include="Resources\bylethIdleCrest.gif" />
       <Content Include="Resources\bylethJump.gif" />

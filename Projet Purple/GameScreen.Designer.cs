@@ -122,7 +122,7 @@
             // 
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::Projet_Purple.Properties.Resources.deathFrame;
+            this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdle;
             this.player.Location = new System.Drawing.Point(40, 530);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(50, 50);

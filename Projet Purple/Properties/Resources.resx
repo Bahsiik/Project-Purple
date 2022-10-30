@@ -116,4 +116,22 @@
   <data name="heart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bylethFIdle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFIdle.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethFIdleCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFIdleCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethFRunLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFRunLeft.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethFRunLeftCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFRunLeftCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethFRunRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFRunRight.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bylethFRunRightCrest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bylethFRunRightCrest.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

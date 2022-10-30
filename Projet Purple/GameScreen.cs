@@ -365,16 +365,34 @@ namespace Projet_Purple
                 {
                     _animLeft = true;
                     _animIdle = _animRight = false;
-                    player.Image = _getPowerUp
-                        ? Properties.Resources.bylethRunLeftCrest
-                        : Properties.Resources.bylethRunLeft;
+                    if (OptionScreen.Appearance == "BylethM")
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethRunLeftCrest
+                            : Properties.Resources.bylethRunLeft;
+                    }
+                    else
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethFRunLeftCrest
+                            : Properties.Resources.bylethFRunLeft;
+                    }
                 }
 
                 if (_index % 12 == 0)
                 {
-                    player.Image = _getPowerUp
-                        ? Properties.Resources.bylethRunLeftCrest
-                        : Properties.Resources.bylethRunLeft;
+                    if (OptionScreen.Appearance == "BylethM")
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethRunLeftCrest
+                            : Properties.Resources.bylethRunLeft;
+                    }
+                    else
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethFRunLeftCrest
+                            : Properties.Resources.bylethFRunLeft;
+                    }
                 }
             }
             else if (_goRight)
@@ -383,23 +401,53 @@ namespace Projet_Purple
                 {
                     _animRight = true;
                     _animIdle = _animLeft = false;
-                    player.Image = _getPowerUp
-                        ? Properties.Resources.bylethRunRightCrest
-                        : Properties.Resources.bylethRunRight;
+                    if (OptionScreen.Appearance == "BylethM")
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethRunRightCrest
+                            : Properties.Resources.bylethRunRight;
+                    }
+                    else
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethFRunRightCrest
+                            : Properties.Resources.bylethFRunRight;
+                    }
+                    
                 }
 
                 if (_index % 12 == 0)
                 {
-                    player.Image = _getPowerUp
-                        ? Properties.Resources.bylethRunRightCrest
-                        : Properties.Resources.bylethRunRight;
+                    if (OptionScreen.Appearance == "BylethM")
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethRunRightCrest
+                            : Properties.Resources.bylethRunRight;
+                    }
+                    else
+                    {
+                        player.Image = _getPowerUp
+                            ? Properties.Resources.bylethFRunRightCrest
+                            : Properties.Resources.bylethFRunRight;
+                    }
                 }
             }
             else if (!_animIdle)
             {
                 _animLeft = _animRight = false;
                 _animIdle = true;
-                player.Image = _getPowerUp ? Properties.Resources.bylethIdleCrest : Properties.Resources.bylethIdle;
+                if (OptionScreen.Appearance == "BylethM")
+                {
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethIdleCrest
+                        : Properties.Resources.bylethIdle;
+                }
+                else
+                {
+                    player.Image = _getPowerUp
+                        ? Properties.Resources.bylethFIdleCrest
+                        : Properties.Resources.bylethFIdle;
+                }
             }
         }
 

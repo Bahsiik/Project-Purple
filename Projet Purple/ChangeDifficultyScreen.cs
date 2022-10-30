@@ -3,8 +3,10 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
+    /* It's a form that allows the user to change the difficulty of the game */
     public sealed partial class ChangeDifficultyScreen : Form
     {
+        /* It's the constructor of the class. It's called when the form is created. */
         public ChangeDifficultyScreen()
         {
             InitializeComponent();
@@ -15,9 +17,14 @@ namespace Projet_Purple
             }
         }
 
+        /* It's the variables that are used to store the difficulty of the game and the progression of the player. */
         public static string Difficulty = "peaceful";
         public static bool PeacefulDone, EasyDone, MediumDone, HardUnlocked, HardDone;
 
+
+        /// <summary>
+        /// BACK BUTTON MANAGEMENT (click, mouse enter and mouse leave)
+        /// </summary>
         private void backButton_Click(object sender, EventArgs e)
         {
             var optionScreen = new OptionScreen();
@@ -35,6 +42,10 @@ namespace Projet_Purple
             backButton.Image = Properties.Resources.buttonBackLow;
         }
 
+        
+        /// <summary>
+        /// PEACEFUL BUTTON MANAGEMENT (click, mouse enter and mouse leave)
+        /// </summary>
         private void peacefulDifficulty_Click(object sender, EventArgs e)
         {
             Difficulty = "peaceful";
@@ -56,6 +67,10 @@ namespace Projet_Purple
             DisplaySelectedDifficulty();
         }
 
+
+        /// <summary>
+        /// EASY BUTTON MANAGEMENT (click, mouse enter and mouse leave)
+        /// </summary>
         private void easyDifficulty_Click(object sender, EventArgs e)
         {
             Difficulty = "easy";
@@ -77,6 +92,10 @@ namespace Projet_Purple
             DisplaySelectedDifficulty();
         }
 
+
+        /// <summary>
+        /// MEDIUM BUTTON MANAGEMENT (click, mouse enter and mouse leave)
+        /// </summary>
         private void mediumDifficulty_Click(object sender, EventArgs e)
         {
             Difficulty = "medium";
@@ -98,6 +117,10 @@ namespace Projet_Purple
             DisplaySelectedDifficulty();
         }
 
+        
+        /// <summary>
+        /// HARD BUTTON MANAGEMENT (click, mouse enter and mouse leave)
+        /// </summary>
         private void hardDifficulty_Click(object sender, EventArgs e)
         {
             if (HardUnlocked)
@@ -130,6 +153,11 @@ namespace Projet_Purple
             DisplaySelectedDifficulty();
         }
 
+
+        /// <summary>
+        /// It displays the selected difficulty by changing the images of the difficulty buttons and the difficulty
+        /// description
+        /// </summary>
         private void DisplaySelectedDifficulty()
         {
             switch (Difficulty)

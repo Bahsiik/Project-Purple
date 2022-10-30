@@ -498,6 +498,7 @@
             this.scoreLBL.Size = new System.Drawing.Size(139, 29);
             this.scoreLBL.TabIndex = 90;
             this.scoreLBL.Text = "label1";
+            this.scoreLBL.Click += new System.EventHandler(this.scoreLBL_Click);
             // 
             // leftFlag
             // 

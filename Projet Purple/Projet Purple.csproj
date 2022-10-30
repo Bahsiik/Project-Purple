@@ -52,7 +52,6 @@
         <Compile Include="ChangeDifficultyScreen.Designer.cs">
           <DependentUpon>ChangeDifficultyScreen.cs</DependentUpon>
         </Compile>
-        <Compile Include="Enemy.cs" />
         <Compile Include="GameOver.cs">
           <SubType>Form</SubType>
         </Compile>

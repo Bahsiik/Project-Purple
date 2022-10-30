@@ -36,6 +36,7 @@ namespace Projet_Purple
         private bool _dead;
         private int _crestAppearIndex;
         private bool _questDone1, _questDone2, _questDone3;
+        private int _life = 3;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -59,6 +60,7 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
+            label1.Text = "Life: " + _life;
             if (!_dead)
             {
                 PlayerMovement();
@@ -67,15 +69,9 @@ namespace Projet_Purple
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
-                if (_quest != 0)
-                {
-                    QuestDone(_quest);
-                }
 
-                if (powerUp.Visible)
-                {
-                    CrestAppearAnimation();
-                }
+                
+                
 
                 foreach (Control x in this.Controls)
                 {
@@ -130,7 +126,7 @@ namespace Projet_Purple
                         }
                     }
                 }
-
+                
                 if (player.Bounds.IntersectsWith(end.Bounds) && _score >= 100)
                 {
                     _win = true;
@@ -145,6 +141,18 @@ namespace Projet_Purple
                     endLBL.Visible = true;
                     endLBL.Text = "You lose !\n(Press R to restart)";
                 }
+                
+                if (_quest != 0)
+                {
+                    QuestDone(_quest);
+                }
+
+                if (powerUp.Visible)
+                {
+                    CrestAppearAnimation();
+                }
+
+                
 
                 scoreLBL.Text = "Score: " + _score;
                 lblMission.SendToBack();
@@ -155,12 +163,43 @@ namespace Projet_Purple
             else if (_dead)
             {
                 DeathAnimation();
-                endLBL.Visible = true;
-                endLBL.Text = "You lose !\n(Press R to restart)";
+                
+                switch (_life)
+                {
+                    case 0:
+                        _lose = true;
+                        heart1.Visible = false;
+                        heart2.Visible = false;
+                        heart3.Visible = false;
+                        break;
+                    case 1:
+                        heart1.Visible = true;
+                        heart2.Visible = false;
+                        heart3.Visible = false;
+                        break;
+                    case 2:
+                        heart1.Visible = true;
+                        heart2.Visible = true;
+                        heart3.Visible = false;
+                        break;
+                    case 3:
+                        heart1.Visible = true;
+                        heart2.Visible = true;
+                        heart3.Visible = true;
+                        break;
+                }
+                
+                if (player.Top > this.ClientSize.Height)
+                {
+                    endLBL.Visible = true;
+                    endLBL.Text = "You lose !\n(Press R to restart)";
+                }
+                
                 if (_quest != 0)
                 {
                     QuestDone(_quest);
                 }
+                
                 if (powerUp.Visible)
                 {
                     CrestAppearAnimation();
@@ -220,7 +259,7 @@ namespace Projet_Purple
                 powerUp.Visible = true;
             }
 
-            if (_score > 100)
+            if (_score >= 100)
             {
                 if (!_questDone3)
                 {
@@ -228,7 +267,6 @@ namespace Projet_Purple
                     _index2 = 0;
                     _questDone3 = true;
                 }
-
                 end.Image = Properties.Resources.openDoor;
             }
         }
@@ -266,6 +304,8 @@ namespace Projet_Purple
             }
             else
             {
+                _life--;
+
                 _lose = true;
                 _dead = true;
                 player.Image = Properties.Resources.deathFrame;
@@ -419,7 +459,7 @@ namespace Projet_Purple
                     _goRight = false;
                     break;
                 case Keys.R:
-                    if (_win || _lose) Restart();
+                    if ((_win || _lose) && player.Top > this.ClientSize.Height ) Restart();
                     break;
             }
         }

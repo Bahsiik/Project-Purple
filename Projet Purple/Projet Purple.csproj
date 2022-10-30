@@ -46,6 +46,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Enemy.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -99,6 +100,7 @@
       <Content Include="Resources\Crest_of_Flames.png" />
       <Content Include="Resources\deathFrame.png" />
       <Content Include="Resources\halfOpenDoor.png" />
+      <Content Include="Resources\heart.png" />
       <Content Include="Resources\mediumEnemyLeft.gif" />
       <Content Include="Resources\mediumEnemyRight.gif" />
       <Content Include="Resources\openDoor.png" />

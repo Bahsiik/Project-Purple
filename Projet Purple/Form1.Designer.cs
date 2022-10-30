@@ -65,8 +65,10 @@
             this.leftFlag = new System.Windows.Forms.PictureBox();
             this.rightFlag = new System.Windows.Forms.PictureBox();
             this.endLBL = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.heart1 = new System.Windows.Forms.PictureBox();
+            this.heart2 = new System.Windows.Forms.PictureBox();
+            this.heart3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).BeginInit();
@@ -99,8 +101,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.topFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightFlag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -120,7 +123,7 @@
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::Projet_Purple.Properties.Resources.deathFrame;
-            this.player.Location = new System.Drawing.Point(129, 341);
+            this.player.Location = new System.Drawing.Point(21, 662);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(50, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -475,7 +478,7 @@
             this.scoreLBL.BackColor = System.Drawing.Color.Transparent;
             this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scoreLBL.Location = new System.Drawing.Point(-3, 9);
+            this.scoreLBL.Location = new System.Drawing.Point(195, 9);
             this.scoreLBL.Name = "scoreLBL";
             this.scoreLBL.Size = new System.Drawing.Size(139, 29);
             this.scoreLBL.TabIndex = 90;
@@ -514,29 +517,47 @@
             this.endLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.endLBL.Visible = false;
             // 
-            // pictureBox2
+            // heart1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(97, 282);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 95;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "coins50";
+            this.heart1.BackColor = System.Drawing.Color.Transparent;
+            this.heart1.Image = global::Projet_Purple.Properties.Resources.heart;
+            this.heart1.Location = new System.Drawing.Point(6, 9);
+            this.heart1.Name = "heart1";
+            this.heart1.Size = new System.Drawing.Size(40, 40);
+            this.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heart1.TabIndex = 95;
+            this.heart1.TabStop = false;
             // 
-            // pictureBox5
+            // heart2
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(150, 282);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 96;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "coins50";
+            this.heart2.BackColor = System.Drawing.Color.Transparent;
+            this.heart2.Image = global::Projet_Purple.Properties.Resources.heart;
+            this.heart2.Location = new System.Drawing.Point(50, 9);
+            this.heart2.Name = "heart2";
+            this.heart2.Size = new System.Drawing.Size(40, 40);
+            this.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heart2.TabIndex = 96;
+            this.heart2.TabStop = false;
+            // 
+            // heart3
+            // 
+            this.heart3.BackColor = System.Drawing.Color.Transparent;
+            this.heart3.Image = global::Projet_Purple.Properties.Resources.heart;
+            this.heart3.Location = new System.Drawing.Point(96, 9);
+            this.heart3.Name = "heart3";
+            this.heart3.Size = new System.Drawing.Size(40, 40);
+            this.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.heart3.TabIndex = 97;
+            this.heart3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(820, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 58);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -546,8 +567,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1263, 780);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.heart3);
+            this.Controls.Add(this.heart2);
+            this.Controls.Add(this.heart1);
             this.Controls.Add(this.endLBL);
             this.Controls.Add(this.rightFlag);
             this.Controls.Add(this.leftFlag);
@@ -624,13 +647,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.topFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightFlag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heart3)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.PictureBox heart2;
+        private System.Windows.Forms.PictureBox heart3;
+
+        private System.Windows.Forms.PictureBox heart1;
 
         private System.Windows.Forms.Label endLBL;
 

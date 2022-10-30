@@ -137,6 +137,12 @@ namespace Projet_Purple
 
                 if (player.Top > this.ClientSize.Height)
                 {
+                    if (!_lose)
+                    {
+                        _life--;                
+                    }
+                    DisplayLife();
+
                     _lose = true;
                     endLBL.Visible = true;
                     endLBL.Text = "You lose !\n(Press R to restart)";
@@ -164,30 +170,7 @@ namespace Projet_Purple
             {
                 DeathAnimation();
                 
-                switch (_life)
-                {
-                    case 0:
-                        _lose = true;
-                        heart1.Visible = false;
-                        heart2.Visible = false;
-                        heart3.Visible = false;
-                        break;
-                    case 1:
-                        heart1.Visible = true;
-                        heart2.Visible = false;
-                        heart3.Visible = false;
-                        break;
-                    case 2:
-                        heart1.Visible = true;
-                        heart2.Visible = true;
-                        heart3.Visible = false;
-                        break;
-                    case 3:
-                        heart1.Visible = true;
-                        heart2.Visible = true;
-                        heart3.Visible = true;
-                        break;
-                }
+                DisplayLife();
                 
                 if (player.Top > this.ClientSize.Height)
                 {
@@ -204,6 +187,34 @@ namespace Projet_Purple
                 {
                     CrestAppearAnimation();
                 }
+            }
+        }
+
+        private void DisplayLife()
+        {
+            switch (_life)
+            {
+                case 0:
+                    _lose = true;
+                    heart1.Visible = false;
+                    heart2.Visible = false;
+                    heart3.Visible = false;
+                    break;
+                case 1:
+                    heart1.Visible = true;
+                    heart2.Visible = false;
+                    heart3.Visible = false;
+                    break;
+                case 2:
+                    heart1.Visible = true;
+                    heart2.Visible = true;
+                    heart3.Visible = false;
+                    break;
+                case 3:
+                    heart1.Visible = true;
+                    heart2.Visible = true;
+                    heart3.Visible = true;
+                    break;
             }
         }
 

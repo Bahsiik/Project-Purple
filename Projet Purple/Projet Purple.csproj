@@ -115,6 +115,12 @@
       <Content Include="Resources\buttonGray.png" />
       <Content Include="Resources\buttonOption.png" />
       <Content Include="Resources\buttonOptionLow.png" />
+      <Content Include="Resources\buttonPauseLeave.png" />
+      <Content Include="Resources\buttonPauseLeaveLow.png" />
+      <Content Include="Resources\buttonPauseMenu.png" />
+      <Content Include="Resources\buttonPauseMenuLow.png" />
+      <Content Include="Resources\buttonPauseResume.png" />
+      <Content Include="Resources\buttonPauseResumeLow.png" />
       <Content Include="Resources\buttonQuit.png" />
       <Content Include="Resources\buttonQuitLow.png" />
       <Content Include="Resources\bylethFIdle.gif" />

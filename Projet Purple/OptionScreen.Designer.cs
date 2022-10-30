@@ -122,10 +122,10 @@ namespace Projet_Purple
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Projet_Purple.Properties.Resources.bindingsActionRight;
             this.pictureBox3.Location = new System.Drawing.Point(63, 184);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(172, 81);
-            this.pictureBox3.Image = global::Projet_Purple.Properties.Resources.bindingsActionRight;
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
@@ -133,10 +133,10 @@ namespace Projet_Purple
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Projet_Purple.Properties.Resources.bindingsActionLeft;
             this.pictureBox4.Location = new System.Drawing.Point(63, 294);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(172, 81);
-            this.pictureBox4.Image = global::Projet_Purple.Properties.Resources.bindingsActionLeft;
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
@@ -144,10 +144,10 @@ namespace Projet_Purple
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Projet_Purple.Properties.Resources.bindingsActionJump;
             this.pictureBox5.Location = new System.Drawing.Point(63, 396);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(172, 81);
-            this.pictureBox5.Image = global::Projet_Purple.Properties.Resources.bindingsActionJump;
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;

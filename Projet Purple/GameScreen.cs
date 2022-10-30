@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -37,6 +38,7 @@ namespace Projet_Purple
         private int _crestAppearIndex;
         private bool _questDone1, _questDone2, _questDone3;
         private int _life = 3;
+        private bool _pause;
 
         // Moving platforms
         private int _verticalSpeed = 1;
@@ -507,6 +509,30 @@ namespace Projet_Purple
                         }
 
                         break;
+                    case Keys.R:
+                        if (_win || (_lose && player.Top > this.ClientSize.Height)) Restart();
+                        break;
+                    case Keys.Escape:
+                        if (!_win && !_lose)
+                        {
+                            _pause = !_pause;
+                            if (_pause)
+                            {
+                                gameTimer.Stop();
+                                pauseResumeButton.Visible = true;
+                                pauseMenuButton.Visible = true;
+                                pauseLeaveButton.Visible = true;
+                            }
+                            else
+                            {
+                                gameTimer.Start();
+                                pauseResumeButton.Visible = false;
+                                pauseMenuButton.Visible = false;
+                                pauseLeaveButton.Visible = false;
+                            }
+                        }
+
+                        break;
                 }
             }
         }
@@ -522,9 +548,6 @@ namespace Projet_Purple
                 case Keys.D:
                 case Keys.Right:
                     _goRight = false;
-                    break;
-                case Keys.R:
-                    if (_win || (_lose && player.Top > this.ClientSize.Height)) Restart();
                     break;
             }
         }
@@ -670,6 +693,57 @@ namespace Projet_Purple
                     mediumEnemy.Image = Properties.Resources.mediumEnemyRight;
                 }
             }
+        }
+
+        private void pauseResumeButton_MouseEnter(object sender, EventArgs e)
+        {
+            pauseResumeButton.Image = Properties.Resources.buttonPauseResume;
+        }
+
+        private void pauseResumeButton_MouseLeave(object sender, EventArgs e)
+        {
+            pauseResumeButton.Image = Properties.Resources.buttonPauseResumeLow;
+        }
+        
+        private void pauseMenuButton_MouseEnter(object sender, EventArgs e)
+        {
+            pauseMenuButton.Image = Properties.Resources.buttonPauseMenu;
+        }
+        
+        private void pauseMenuButton_MouseLeave(object sender, EventArgs e)
+        {
+            pauseMenuButton.Image = Properties.Resources.buttonPauseMenuLow;
+        }
+        
+        private void pauseLeaveButton_MouseEnter(object sender, EventArgs e)
+        {
+            pauseLeaveButton.Image = Properties.Resources.buttonPauseLeave;
+        }
+        
+        private void pauseLeaveButton_MouseLeave(object sender, EventArgs e)
+        {
+            pauseLeaveButton.Image = Properties.Resources.buttonPauseLeaveLow;
+        }
+
+        private void pauseResumeButton_Click(object sender, EventArgs e)
+        {
+            gameTimer.Start();
+            pauseResumeButton.Visible = false;
+            pauseMenuButton.Visible = false;
+            pauseLeaveButton.Visible = false;
+        }
+        
+        private void pauseMenuButton_Click(object sender, EventArgs e)
+        {
+            var titleScreen = new TitleScreen();
+            titleScreen.Show();
+            this.Hide();
+        }
+        
+        
+        private void pauseLeaveButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

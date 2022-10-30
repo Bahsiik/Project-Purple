@@ -69,6 +69,9 @@
             this.heart2 = new System.Windows.Forms.PictureBox();
             this.heart3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pauseResumeButton = new System.Windows.Forms.PictureBox();
+            this.pauseMenuButton = new System.Windows.Forms.PictureBox();
+            this.pauseLeaveButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).BeginInit();
@@ -104,6 +107,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseResumeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseMenuButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseLeaveButton)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -123,7 +129,7 @@
             this.player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.Image = global::Projet_Purple.Properties.Resources.bylethIdle;
-            this.player.Location = new System.Drawing.Point(40, 530);
+            this.player.Location = new System.Drawing.Point(12, 664);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(50, 50);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -559,6 +565,51 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "label1";
             // 
+            // pauseResumeButton
+            // 
+            this.pauseResumeButton.BackColor = System.Drawing.Color.Transparent;
+            this.pauseResumeButton.Image = global::Projet_Purple.Properties.Resources.buttonPauseResumeLow;
+            this.pauseResumeButton.Location = new System.Drawing.Point(340, 178);
+            this.pauseResumeButton.Name = "pauseResumeButton";
+            this.pauseResumeButton.Size = new System.Drawing.Size(559, 98);
+            this.pauseResumeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pauseResumeButton.TabIndex = 99;
+            this.pauseResumeButton.TabStop = false;
+            this.pauseResumeButton.Visible = false;
+            this.pauseResumeButton.Click += new System.EventHandler(this.pauseResumeButton_Click);
+            this.pauseResumeButton.MouseEnter += new System.EventHandler(this.pauseResumeButton_MouseEnter);
+            this.pauseResumeButton.MouseLeave += new System.EventHandler(this.pauseResumeButton_MouseLeave);
+            // 
+            // pauseMenuButton
+            // 
+            this.pauseMenuButton.BackColor = System.Drawing.Color.Transparent;
+            this.pauseMenuButton.Image = global::Projet_Purple.Properties.Resources.buttonPauseMenuLow;
+            this.pauseMenuButton.Location = new System.Drawing.Point(340, 329);
+            this.pauseMenuButton.Name = "pauseMenuButton";
+            this.pauseMenuButton.Size = new System.Drawing.Size(559, 98);
+            this.pauseMenuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pauseMenuButton.TabIndex = 100;
+            this.pauseMenuButton.TabStop = false;
+            this.pauseMenuButton.Visible = false;
+            this.pauseMenuButton.Click += new System.EventHandler(this.pauseMenuButton_Click);
+            this.pauseMenuButton.MouseEnter += new System.EventHandler(this.pauseMenuButton_MouseEnter);
+            this.pauseMenuButton.MouseLeave += new System.EventHandler(this.pauseMenuButton_MouseLeave);
+            // 
+            // pauseLeaveButton
+            // 
+            this.pauseLeaveButton.BackColor = System.Drawing.Color.Transparent;
+            this.pauseLeaveButton.Image = global::Projet_Purple.Properties.Resources.buttonPauseLeaveLow;
+            this.pauseLeaveButton.Location = new System.Drawing.Point(340, 476);
+            this.pauseLeaveButton.Name = "pauseLeaveButton";
+            this.pauseLeaveButton.Size = new System.Drawing.Size(559, 98);
+            this.pauseLeaveButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pauseLeaveButton.TabIndex = 101;
+            this.pauseLeaveButton.TabStop = false;
+            this.pauseLeaveButton.Visible = false;
+            this.pauseLeaveButton.Click += new System.EventHandler(this.pauseLeaveButton_Click);
+            this.pauseLeaveButton.MouseEnter += new System.EventHandler(this.pauseLeaveButton_MouseEnter);
+            this.pauseLeaveButton.MouseLeave += new System.EventHandler(this.pauseLeaveButton_MouseLeave);
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -567,6 +618,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1263, 780);
+            this.Controls.Add(this.pauseLeaveButton);
+            this.Controls.Add(this.pauseMenuButton);
+            this.Controls.Add(this.pauseResumeButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.heart3);
             this.Controls.Add(this.heart2);
@@ -650,8 +704,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.heart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseResumeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseMenuButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pauseLeaveButton)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pauseMenuButton;
+        private System.Windows.Forms.PictureBox pauseLeaveButton;
+
+        private System.Windows.Forms.PictureBox pauseResumeButton;
 
         private System.Windows.Forms.Label label1;
 

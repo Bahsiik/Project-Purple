@@ -101,6 +101,9 @@
     <ItemGroup>
       <Content Include="Resources\bylethFIdle.gif" />
       <Content Include="Resources\bylethFIdleCrest.gif" />
+      <Content Include="Resources\bylethFPortrait.png" />
+      <Content Include="Resources\bylethFPortraitGray.png" />
+      <Content Include="Resources\bylethFPortraitLow.png" />
       <Content Include="Resources\bylethFRunLeft.gif" />
       <Content Include="Resources\bylethFRunLeftCrest.gif" />
       <Content Include="Resources\bylethFRunRight.gif" />
@@ -108,6 +111,9 @@
       <Content Include="Resources\bylethIdle.gif" />
       <Content Include="Resources\bylethIdleCrest.gif" />
       <Content Include="Resources\bylethJump.gif" />
+      <Content Include="Resources\bylethPortrait.png" />
+      <Content Include="Resources\bylethPortraitGray.png" />
+      <Content Include="Resources\bylethPortraitLow.png" />
       <Content Include="Resources\bylethRunLeft.gif" />
       <Content Include="Resources\bylethRunLeftCrest.gif" />
       <Content Include="Resources\bylethRunRight.gif" />

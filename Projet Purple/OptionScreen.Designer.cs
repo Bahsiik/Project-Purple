@@ -39,9 +39,11 @@ namespace Projet_Purple
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.BylethM = new System.Windows.Forms.PictureBox();
+            this.BylethF = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BylethM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BylethF)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,31 +112,11 @@ namespace Projet_Purple
             // label8
             // 
             this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.Location = new System.Drawing.Point(752, 38);
+            this.label8.Location = new System.Drawing.Point(725, 38);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(412, 105);
             this.label8.TabIndex = 7;
             this.label8.Text = "Choose your character";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(752, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 199);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Byleth (M)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.AppearanceBylethMClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(994, 190);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 199);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Byleth (F)";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.AppearanceBylethFClick);
             // 
             // button3
             // 
@@ -146,14 +128,41 @@ namespace Projet_Purple
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.BackMenuButton);
             // 
+            // BylethM
+            // 
+            this.BylethM.Image = global::Projet_Purple.Properties.Resources.bylethPortrait;
+            this.BylethM.Location = new System.Drawing.Point(660, 184);
+            this.BylethM.Name = "BylethM";
+            this.BylethM.Size = new System.Drawing.Size(262, 263);
+            this.BylethM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BylethM.TabIndex = 11;
+            this.BylethM.TabStop = false;
+            this.BylethM.Click += new System.EventHandler(this.BylethM_Click);
+            this.BylethM.MouseEnter += new System.EventHandler(this.BylethM_MouseEnter);
+            this.BylethM.MouseLeave += new System.EventHandler(this.BylethM_MouseLeave);
+            // 
+            // BylethF
+            // 
+            this.BylethF.Image = global::Projet_Purple.Properties.Resources.bylethFPortraitGray;
+            this.BylethF.Location = new System.Drawing.Point(943, 184);
+            this.BylethF.Name = "BylethF";
+            this.BylethF.Size = new System.Drawing.Size(262, 263);
+            this.BylethF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BylethF.TabIndex = 13;
+            this.BylethF.TabStop = false;
+            this.BylethF.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.BylethF.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.BylethF.MouseLeave += new System.EventHandler(this.BylethF_MouseLeave);
+            // 
             // OptionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1251, 768);
+            this.Controls.Add(this.BylethF);
+            this.Controls.Add(this.BylethM);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -162,19 +171,23 @@ namespace Projet_Purple
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "OptionScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OptionScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.BylethM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BylethF)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox BylethF;
+
+        private System.Windows.Forms.PictureBox BylethM;
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
 
         private System.Windows.Forms.Label label1;

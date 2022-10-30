@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace Projet_Purple
@@ -20,14 +21,50 @@ namespace Projet_Purple
             titleScreen.Show();
         }
 
-        private void AppearanceBylethMClick(object sender, EventArgs e)
+        private void BylethM_Click(object sender, EventArgs e)
         {
             Appearance = "BylethM";
+            BylethM.Image = Properties.Resources.bylethPortrait;
+            BylethF.Image = Properties.Resources.bylethFPortraitGray;
         }
 
-        private void AppearanceBylethFClick(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             Appearance = "BylethF";
+            BylethM.Image = Properties.Resources.bylethPortraitGray;
+            BylethF.Image = Properties.Resources.bylethFPortrait;
+        }
+
+        private void BylethM_MouseEnter(object sender, EventArgs e)
+        {
+            if (Appearance != "BylethM")
+            {
+                BylethM.Image = Properties.Resources.bylethPortraitLow;
+            }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (Appearance != "BylethF")
+            {
+                BylethF.Image = Properties.Resources.bylethFPortraitLow;
+            }
+        }
+
+        private void BylethM_MouseLeave(object sender, EventArgs e)
+        {
+            if (Appearance != "BylethM")
+            {
+                BylethM.Image = Properties.Resources.bylethPortraitGray;
+            }
+        }
+
+        private void BylethF_MouseLeave(object sender, EventArgs e)
+        {
+            if (Appearance != "BylethF")
+            {
+                BylethF.Image = Properties.Resources.bylethFPortraitGray;
+            }
         }
     }
 }

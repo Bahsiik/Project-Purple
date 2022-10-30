@@ -47,6 +47,12 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Enemy.cs" />
+        <Compile Include="GameOver.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="GameOver.Designer.cs">
+          <DependentUpon>GameOver.cs</DependentUpon>
+        </Compile>
         <Compile Include="GameScreen.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -67,6 +73,9 @@
         <Compile Include="TitleScreen.Designer.cs">
           <DependentUpon>TitleScreen.cs</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="GameOver.resx">
+          <DependentUpon>GameOver.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="GameScreen.resx">
           <DependentUpon>GameScreen.cs</DependentUpon>
         </EmbeddedResource>
@@ -147,6 +156,7 @@
       <Content Include="Resources\crestAppear.gif" />
       <Content Include="Resources\Crest_of_Flames.png" />
       <Content Include="Resources\deathFrame.png" />
+      <Content Include="Resources\gameOverTitle.png" />
       <Content Include="Resources\halfOpenDoor.png" />
       <Content Include="Resources\heart.png" />
       <Content Include="Resources\mainButton.png" />

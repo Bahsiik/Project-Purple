@@ -502,6 +502,16 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gameOverTitle {
+            get {
+                object obj = ResourceManager.GetObject("gameOverTitle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap halfOpenDoor {
             get {
                 object obj = ResourceManager.GetObject("halfOpenDoor", resourceCulture);

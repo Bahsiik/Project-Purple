@@ -197,9 +197,10 @@ namespace Projet_Purple
             {
                 case 0:
                     _lose = true;
-                    heart1.Visible = false;
-                    heart2.Visible = false;
-                    heart3.Visible = false;
+                    var gameOver = new GameOver();
+                    gameOver.Show();
+                    gameTimer.Stop();
+                    Hide();
                     break;
                 case 1:
                     heart1.Visible = true;

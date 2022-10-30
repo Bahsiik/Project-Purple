@@ -11,3 +11,4 @@ C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debu
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.TitleScreen.resources
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.OptionScreen.resources
 C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.GameScreen.resources
+C:\Users\omist\Documents\.Ynov\Cours CSharp\Projet Purple\Projet Purple\obj\Debug\Projet_Purple.GameOver.resources

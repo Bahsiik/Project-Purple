@@ -64,14 +64,13 @@ namespace Projet_Purple
             if (!_dead)
             {
                 PlayerMovement();
-                PlayerAnimation();
                 EnemyMovement();
+
+                PlayerAnimation();
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
 
-                
-                
 
                 foreach (Control x in this.Controls)
                 {
@@ -126,7 +125,7 @@ namespace Projet_Purple
                         }
                     }
                 }
-                
+
                 if (player.Bounds.IntersectsWith(end.Bounds) && _score >= 100)
                 {
                     _win = true;
@@ -139,15 +138,16 @@ namespace Projet_Purple
                 {
                     if (!_lose)
                     {
-                        _life--;                
+                        _life--;
                     }
+
                     DisplayLife();
 
                     _lose = true;
                     endLBL.Visible = true;
                     endLBL.Text = "You lose !\n(Press R to restart)";
                 }
-                
+
                 if (_quest != 0)
                 {
                     QuestDone(_quest);
@@ -158,7 +158,6 @@ namespace Projet_Purple
                     CrestAppearAnimation();
                 }
 
-                
 
                 scoreLBL.Text = "Score: " + _score;
                 lblMission.SendToBack();
@@ -169,20 +168,20 @@ namespace Projet_Purple
             else if (_dead)
             {
                 DeathAnimation();
-                
+
                 DisplayLife();
-                
+
                 if (player.Top > this.ClientSize.Height)
                 {
                     endLBL.Visible = true;
                     endLBL.Text = "You lose !\n(Press R to restart)";
                 }
-                
+
                 if (_quest != 0)
                 {
                     QuestDone(_quest);
                 }
-                
+
                 if (powerUp.Visible)
                 {
                     CrestAppearAnimation();
@@ -247,6 +246,7 @@ namespace Projet_Purple
             {
                 lblMission.Left += 10;
             }
+
             if (_index2 > 200)
             {
                 _quest = 0;
@@ -278,6 +278,7 @@ namespace Projet_Purple
                     _index2 = 0;
                     _questDone3 = true;
                 }
+
                 end.Image = Properties.Resources.openDoor;
             }
         }
@@ -413,7 +414,6 @@ namespace Projet_Purple
                             ? Properties.Resources.bylethFRunRightCrest
                             : Properties.Resources.bylethFRunRight;
                     }
-                    
                 }
 
                 if (_index % 12 == 0)
@@ -488,12 +488,16 @@ namespace Projet_Purple
             {
                 switch (e.KeyCode)
                 {
+                    case Keys.Q:
                     case Keys.Left:
                         _goLeft = true;
                         break;
+                    case Keys.D:
                     case Keys.Right:
                         _goRight = true;
                         break;
+                    case Keys.Z:
+                    case Keys.Up:
                     case Keys.Space:
                         if (_onGround)
                         {
@@ -511,14 +515,16 @@ namespace Projet_Purple
         {
             switch (e.KeyCode)
             {
+                case Keys.Q:
                 case Keys.Left:
                     _goLeft = false;
                     break;
+                case Keys.D:
                 case Keys.Right:
                     _goRight = false;
                     break;
                 case Keys.R:
-                    if ((_win || _lose) && player.Top > this.ClientSize.Height ) Restart();
+                    if (_win || (_lose && player.Top > this.ClientSize.Height)) Restart();
                     break;
             }
         }

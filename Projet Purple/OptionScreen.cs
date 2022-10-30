@@ -23,14 +23,6 @@ namespace Projet_Purple
             }
         }
 
-
-        private void BackMenuButton(object sender, EventArgs e)
-        {
-            this.Hide();
-            var titleScreen = new TitleScreen();
-            titleScreen.Show();
-        }
-
         private void BylethM_Click(object sender, EventArgs e)
         {
             Appearance = "BylethM";
@@ -76,6 +68,13 @@ namespace Projet_Purple
                 BylethF.Image = Properties.Resources.bylethFPortraitGray;
             }
         }
+        
+        private void BackMenuButton(object sender, EventArgs e)
+        {
+            this.Hide();
+            var titleScreen = new TitleScreen();
+            titleScreen.Show();
+        }
 
         private void BackButton_Enter(object sender, EventArgs e)
         {
@@ -85,6 +84,23 @@ namespace Projet_Purple
         private void BackButton_Leave(object sender, EventArgs e)
         {
             backButton.Image = Properties.Resources.buttonBackLow;
+        }
+        
+        private void buttonChangeDifficulty_Click(object sender, EventArgs e)
+        {
+            var difficultyScreen = new ChangeDifficultyScreen();
+            difficultyScreen.Show();
+            Hide();
+        }
+
+        private void buttonChangeDifficulty_MouseEnter(object sender, EventArgs e)
+        {
+            buttonChangeDifficulty.Image = Properties.Resources.buttonDifficultyChange;
+        }
+
+        private void buttonChangeDifficulty_MouseLeave(object sender, EventArgs e)
+        {
+            buttonChangeDifficulty.Image = Properties.Resources.buttonDifficultyChangeLow;
         }
     }
 }

@@ -15,8 +15,7 @@ namespace Projet_Purple
         }
 
         private int _index;
-
-
+        
         private void winScreenTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
             _index++;

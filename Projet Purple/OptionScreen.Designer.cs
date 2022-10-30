@@ -42,6 +42,7 @@ namespace Projet_Purple
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.buttonChangeDifficulty = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BylethM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BylethF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
@@ -53,6 +54,7 @@ namespace Projet_Purple
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonChangeDifficulty)).BeginInit();
             this.SuspendLayout();
             // 
             // BylethM
@@ -87,7 +89,7 @@ namespace Projet_Purple
             // 
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.Image = global::Projet_Purple.Properties.Resources.buttonBackLow;
-            this.backButton.Location = new System.Drawing.Point(310, 614);
+            this.backButton.Location = new System.Drawing.Point(339, 657);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(559, 98);
             this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,6 +187,20 @@ namespace Projet_Purple
             this.pictureBox8.TabIndex = 23;
             this.pictureBox8.TabStop = false;
             // 
+            // buttonChangeDifficulty
+            // 
+            this.buttonChangeDifficulty.BackColor = System.Drawing.Color.Transparent;
+            this.buttonChangeDifficulty.Image = global::Projet_Purple.Properties.Resources.buttonDifficultyChangeLow;
+            this.buttonChangeDifficulty.Location = new System.Drawing.Point(339, 528);
+            this.buttonChangeDifficulty.Name = "buttonChangeDifficulty";
+            this.buttonChangeDifficulty.Size = new System.Drawing.Size(559, 98);
+            this.buttonChangeDifficulty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buttonChangeDifficulty.TabIndex = 24;
+            this.buttonChangeDifficulty.TabStop = false;
+            this.buttonChangeDifficulty.Click += new System.EventHandler(this.buttonChangeDifficulty_Click);
+            this.buttonChangeDifficulty.MouseEnter += new System.EventHandler(this.buttonChangeDifficulty_MouseEnter);
+            this.buttonChangeDifficulty.MouseLeave += new System.EventHandler(this.buttonChangeDifficulty_MouseLeave);
+            // 
             // OptionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,6 +209,7 @@ namespace Projet_Purple
             this.BackgroundImage = global::Projet_Purple.Properties.Resources.titleBackground1Blur;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1251, 768);
+            this.Controls.Add(this.buttonChangeDifficulty);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -218,8 +235,11 @@ namespace Projet_Purple
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonChangeDifficulty)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox buttonChangeDifficulty;
 
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;

@@ -46,6 +46,12 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="ChangeDifficultyScreen.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="ChangeDifficultyScreen.Designer.cs">
+          <DependentUpon>ChangeDifficultyScreen.cs</DependentUpon>
+        </Compile>
         <Compile Include="Enemy.cs" />
         <Compile Include="GameOver.cs">
           <SubType>Form</SubType>
@@ -79,6 +85,9 @@
         <Compile Include="WinScreen.Designer.cs">
           <DependentUpon>WinScreen.cs</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="ChangeDifficultyScreen.resx">
+          <DependentUpon>ChangeDifficultyScreen.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="GameOver.resx">
           <DependentUpon>GameOver.cs</DependentUpon>
         </EmbeddedResource>
@@ -130,6 +139,8 @@
       <Content Include="Resources\button.png" />
       <Content Include="Resources\buttonBack.png" />
       <Content Include="Resources\buttonBackLow.png" />
+      <Content Include="Resources\buttonDifficultyChange.png" />
+      <Content Include="Resources\buttonDifficultyChangeLow.png" />
       <Content Include="Resources\buttonGray.png" />
       <Content Include="Resources\buttonOption.png" />
       <Content Include="Resources\buttonOptionLow.png" />
@@ -165,18 +176,37 @@
       <Content Include="Resources\crestAppear.gif" />
       <Content Include="Resources\Crest_of_Flames.png" />
       <Content Include="Resources\deathFrame.png" />
+      <Content Include="Resources\difficultyEasyDesc.png" />
+      <Content Include="Resources\difficultyHardDesc.png" />
+      <Content Include="Resources\difficultyHardLockedDesc.png" />
+      <Content Include="Resources\difficultyMediumDesc.png" />
+      <Content Include="Resources\difficultyPeacefullDesc.png" />
+      <Content Include="Resources\easyDifficulty.png" />
+      <Content Include="Resources\easyDifficultyGray.png" />
+      <Content Include="Resources\easyDifficultyLow.png" />
       <Content Include="Resources\gameOverTitle.png" />
       <Content Include="Resources\halfOpenDoor.png" />
+      <Content Include="Resources\hardDifficulty.png" />
+      <Content Include="Resources\hardDifficultyGray.png" />
+      <Content Include="Resources\hardDifficultyLocked.png" />
+      <Content Include="Resources\hardDifficultyLow.png" />
       <Content Include="Resources\heart.png" />
       <Content Include="Resources\looseBackground.png" />
       <Content Include="Resources\mainButton.png" />
       <Content Include="Resources\mainButtonText.png" />
       <Content Include="Resources\mainButtonTextLow.png" />
+      <Content Include="Resources\mediumDifficulty.png" />
+      <Content Include="Resources\mediumDifficultyGray.png" />
+      <Content Include="Resources\mediumDifficultyLow.png" />
       <Content Include="Resources\mediumEnemyLeft.gif" />
       <Content Include="Resources\mediumEnemyRight.gif" />
       <Content Include="Resources\openDoor.png" />
       <Content Include="Resources\optionCategoryAppearance.png" />
       <Content Include="Resources\optionCategoryBindings.png" />
+      <Content Include="Resources\optionCategoryChooseDifficulty.png" />
+      <Content Include="Resources\peacefullDifficulty.png" />
+      <Content Include="Resources\peacefullDifficultyGray.png" />
+      <Content Include="Resources\peacefullDifficultyLow.png" />
       <Content Include="Resources\titleBackground1.png" />
       <Content Include="Resources\titleBackground1Blur.jpg" />
       <Content Include="Resources\titleBackground2.png" />

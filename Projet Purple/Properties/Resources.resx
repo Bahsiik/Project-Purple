@@ -254,4 +254,67 @@
   <data name="winBackgroundM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winBackgroundM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buttonDifficultyChange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonDifficultyChange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonDifficultyChangeLow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonDifficultyChangeLow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="optionCategoryChooseDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\optionCategoryChooseDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easyDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\easyDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mediumDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mediumDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="peacefullDifficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\peacefullDifficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easyDifficultyGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\easyDifficultyGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="easyDifficultyLow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\easyDifficultyLow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardDifficultyGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardDifficultyGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardDifficultyLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardDifficultyLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hardDifficultyLow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hardDifficultyLow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mediumDifficultyGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mediumDifficultyGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mediumDifficultyLow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mediumDifficultyLow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="peacefullDifficultyGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\peacefullDifficultyGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="peacefullDifficultyLow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\peacefullDifficultyLow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyEasyDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyEasyDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyHardDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyHardDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyHardLockedDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyHardLockedDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyMediumDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyMediumDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyPeacefullDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyPeacefullDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

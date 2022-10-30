@@ -19,6 +19,38 @@ namespace Projet_Purple
 
             _verticalPlatformLocation = verticalPlatform.Location;
             _horizontalPlatformLocation = horizontalPlatform.Location;
+            
+            switch (ChangeDifficultyScreen.Difficulty)
+            {
+                case "peaceful":
+                    easyEnemy.Visible = false;
+                    mediumEnemy.Visible = false;
+                    hardEnemy.Visible = false;
+                    break;
+                case "easy":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = false;
+                    _easyEnemySpeed = 1;
+                    _mediumEnemySpeed = 2;
+                    break;
+                case "medium":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = true;
+                    _easyEnemySpeed = 2;
+                    _mediumEnemySpeed = 3;
+                    _hardEnemySpeed = 4;
+                    break;
+                case "hard":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = true;
+                    _easyEnemySpeed = 4;
+                    _mediumEnemySpeed = 5;
+                    _hardEnemySpeed = 6;
+                    break;
+            }
         }
 
         // Player variables
@@ -47,11 +79,11 @@ namespace Projet_Purple
 
         // Enemies
         private int _enemyAnim;
-        private int _easyEnemySpeed = 2;
-        private int _mediumEnemySpeed = 4;
+        private int _easyEnemySpeed;
+        private int _mediumEnemySpeed;
         private bool _mediumEnemyLeft, _mediumEnemyAnimLeft;
         private bool _mediumEnemyAnimRight = true;
-        private int _hardEnemySpeed = 6;
+        private int _hardEnemySpeed;
         private bool _hardEnemyLeft, _hardEnemyAnimLeft;
         private bool _hardEnemyAnimRight = true;
         private readonly Point _easyEnemyLocation, _mediumEnemyLocation, _hardEnemyLocation;
@@ -67,11 +99,12 @@ namespace Projet_Purple
             {
                 PlayerMovement();
                 EnemyMovement();
-
                 PlayerAnimation();
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
+
+                
 
 
                 foreach (Control x in this.Controls)

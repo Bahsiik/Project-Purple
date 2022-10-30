@@ -99,6 +99,13 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\bindingsActionJump.png" />
+      <Content Include="Resources\bindingsActionLeft.png" />
+      <Content Include="Resources\bindingsActionLeft2.png" />
+      <Content Include="Resources\bindingsActionRight.png" />
+      <Content Include="Resources\bindingsJump.png" />
+      <Content Include="Resources\bindingsLeft.png" />
+      <Content Include="Resources\bindingsRight.png" />
       <Content Include="Resources\button.png" />
       <Content Include="Resources\buttonBack.png" />
       <Content Include="Resources\buttonBackLow.png" />
@@ -139,6 +146,8 @@
       <Content Include="Resources\mediumEnemyLeft.gif" />
       <Content Include="Resources\mediumEnemyRight.gif" />
       <Content Include="Resources\openDoor.png" />
+      <Content Include="Resources\optionCategoryAppearance.png" />
+      <Content Include="Resources\optionCategoryBindings.png" />
       <Content Include="Resources\titleBackground1.png" />
       <Content Include="Resources\titleBackground1Blur.jpg" />
       <Content Include="Resources\titleBackground2.png" />

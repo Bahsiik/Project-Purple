@@ -62,6 +62,76 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bindingsActionJump {
+            get {
+                object obj = ResourceManager.GetObject("bindingsActionJump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsActionLeft {
+            get {
+                object obj = ResourceManager.GetObject("bindingsActionLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsActionLeft2 {
+            get {
+                object obj = ResourceManager.GetObject("bindingsActionLeft2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsActionRight {
+            get {
+                object obj = ResourceManager.GetObject("bindingsActionRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsJump {
+            get {
+                object obj = ResourceManager.GetObject("bindingsJump", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsLeft {
+            get {
+                object obj = ResourceManager.GetObject("bindingsLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bindingsRight {
+            get {
+                object obj = ResourceManager.GetObject("bindingsRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
@@ -475,6 +545,26 @@ namespace Projet_Purple.Properties {
         internal static System.Drawing.Bitmap openDoor {
             get {
                 object obj = ResourceManager.GetObject("openDoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap optionCategoryAppearance {
+            get {
+                object obj = ResourceManager.GetObject("optionCategoryAppearance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap optionCategoryBindings {
+            get {
+                object obj = ResourceManager.GetObject("optionCategoryBindings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

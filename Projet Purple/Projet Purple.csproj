@@ -214,6 +214,7 @@
       <Content Include="Resources\peacefullDifficulty.png" />
       <Content Include="Resources\peacefullDifficultyGray.png" />
       <Content Include="Resources\peacefullDifficultyLow.png" />
+      <Content Include="Resources\rupee.png" />
       <Content Include="Resources\titleBackground1.png" />
       <Content Include="Resources\titleBackground1Blur.jpg" />
       <Content Include="Resources\titleBackground2.png" />

@@ -68,7 +68,6 @@
             this.heart1 = new System.Windows.Forms.PictureBox();
             this.heart2 = new System.Windows.Forms.PictureBox();
             this.heart3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pauseResumeButton = new System.Windows.Forms.PictureBox();
             this.pauseMenuButton = new System.Windows.Forms.PictureBox();
             this.pauseLeaveButton = new System.Windows.Forms.PictureBox();
@@ -76,6 +75,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameTimer)).BeginInit();
@@ -118,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -492,7 +493,7 @@
             this.scoreLBL.BackColor = System.Drawing.Color.Transparent;
             this.scoreLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreLBL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scoreLBL.Location = new System.Drawing.Point(195, 9);
+            this.scoreLBL.Location = new System.Drawing.Point(218, 9);
             this.scoreLBL.Name = "scoreLBL";
             this.scoreLBL.Size = new System.Drawing.Size(139, 29);
             this.scoreLBL.TabIndex = 90;
@@ -563,15 +564,6 @@
             this.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart3.TabIndex = 97;
             this.heart3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(820, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 58);
-            this.label1.TabIndex = 98;
-            this.label1.Text = "label1";
             // 
             // pauseResumeButton
             // 
@@ -666,6 +658,17 @@
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Tag = "coins25";
             // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox21.Image = global::Projet_Purple.Properties.Resources.rupee;
+            this.pictureBox21.Location = new System.Drawing.Point(192, 9);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(20, 30);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 106;
+            this.pictureBox21.TabStop = false;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -674,6 +677,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1263, 780);
+            this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox5);
@@ -681,7 +685,6 @@
             this.Controls.Add(this.pauseLeaveButton);
             this.Controls.Add(this.pauseMenuButton);
             this.Controls.Add(this.pauseResumeButton);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.heart3);
             this.Controls.Add(this.heart2);
             this.Controls.Add(this.heart1);
@@ -771,8 +774,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pictureBox21;
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -783,8 +789,6 @@
         private System.Windows.Forms.PictureBox pauseLeaveButton;
 
         private System.Windows.Forms.PictureBox pauseResumeButton;
-
-        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.PictureBox heart2;
         private System.Windows.Forms.PictureBox heart3;

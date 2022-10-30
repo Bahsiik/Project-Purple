@@ -66,7 +66,6 @@ namespace Projet_Purple
 
         private void GameLoop(object sender, ElapsedEventArgs e)
         {
-            label1.Text = "Gender: " + OptionScreen.Appearance;
             if (!_dead)
             {
                 PlayerMovement();
@@ -75,9 +74,6 @@ namespace Projet_Purple
                 EnemyAnimation();
                 PlatformMovement();
                 ScoreManagement();
-
-                
-
 
                 foreach (Control x in this.Controls)
                 {
@@ -168,7 +164,7 @@ namespace Projet_Purple
                 }
 
 
-                scoreLBL.Text = "Score: " + _score;
+                scoreLBL.Text = "x" + _score;
                 lblMission.SendToBack();
                 player.BringToFront();
                 horizontalPlatform.BringToFront();
@@ -812,5 +808,6 @@ namespace Projet_Purple
         {
             this.Close();
         }
+
     }
 }

@@ -100,9 +100,12 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\bindingsActionJump.png" />
+      <Content Include="Resources\bindingsActionJump1.png" />
       <Content Include="Resources\bindingsActionLeft.png" />
+      <Content Include="Resources\bindingsActionLeft1.png" />
       <Content Include="Resources\bindingsActionLeft2.png" />
       <Content Include="Resources\bindingsActionRight.png" />
+      <Content Include="Resources\bindingsActionRight1.png" />
       <Content Include="Resources\bindingsJump.png" />
       <Content Include="Resources\bindingsLeft.png" />
       <Content Include="Resources\bindingsRight.png" />

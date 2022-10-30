@@ -11,6 +11,16 @@ namespace Projet_Purple
         public OptionScreen()
         {
             InitializeComponent();
+            if (Appearance == "BylethM")
+            {
+                BylethM.Image = Properties.Resources.bylethPortrait;
+                BylethF.Image = Properties.Resources.bylethFPortraitGray;
+            }
+            else
+            {
+                BylethM.Image = Properties.Resources.bylethPortraitGray;
+                BylethF.Image = Properties.Resources.bylethFPortrait;
+            }
         }
 
 

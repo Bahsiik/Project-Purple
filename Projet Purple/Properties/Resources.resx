@@ -203,18 +203,6 @@
   <data name="optionCategoryBindings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\optionCategoryBindings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bindingsActionJump" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bindingsActionJump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bindingsActionLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bindingsActionLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bindingsActionRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bindingsActionRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bindingsActionLeft2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bindingsActionLeft2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bindingsJump" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bindingsJump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,5 +211,14 @@
   </data>
   <data name="bindingsRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bindingsRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bindingsActionJump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bindingsActionJump1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bindingsActionLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bindingsActionLeft1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bindingsActionRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bindingsActionRight1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

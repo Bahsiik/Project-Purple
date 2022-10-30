@@ -532,9 +532,29 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap difficultyEasyDescDone {
+            get {
+                object obj = ResourceManager.GetObject("difficultyEasyDescDone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap difficultyHardDesc {
             get {
                 object obj = ResourceManager.GetObject("difficultyHardDesc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap difficultyHardDescDone {
+            get {
+                object obj = ResourceManager.GetObject("difficultyHardDescDone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -562,9 +582,29 @@ namespace Projet_Purple.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap difficultyMediumDescDone {
+            get {
+                object obj = ResourceManager.GetObject("difficultyMediumDescDone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap difficultyPeacefullDesc {
             get {
                 object obj = ResourceManager.GetObject("difficultyPeacefullDesc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap difficultyPeacefullDescDone {
+            get {
+                object obj = ResourceManager.GetObject("difficultyPeacefullDescDone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

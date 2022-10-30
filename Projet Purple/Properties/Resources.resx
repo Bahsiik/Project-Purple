@@ -314,7 +314,19 @@
   <data name="difficultyMediumDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\difficultyMediumDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="difficultyEasyDescDone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyEasyDescDone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyHardDescDone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyHardDescDone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyMediumDescDone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyMediumDescDone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="difficultyPeacefullDesc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\difficultyPeacefullDesc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\difficultyPeacefullDesc2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="difficultyPeacefullDescDone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\difficultyPeacefullDescDone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

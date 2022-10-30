@@ -3,16 +3,20 @@ using System.Windows.Forms;
 
 namespace Projet_Purple
 {
-    public partial class ChangeDifficultyScreen : Form
+    public sealed partial class ChangeDifficultyScreen : Form
     {
         public ChangeDifficultyScreen()
         {
             InitializeComponent();
             DisplaySelectedDifficulty();
+            if (HardDone)
+            {
+                BackgroundImage = Properties.Resources.titleBackground2Blur;
+            }
         }
 
         public static string Difficulty = "peaceful";
-        public bool PeacufulDone, EasyDone, MediumDone, HardUnlocked, HardDone;
+        public static bool PeacefulDone, EasyDone, MediumDone, HardUnlocked, HardDone;
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -42,13 +46,14 @@ namespace Projet_Purple
             peacefulDifficulty.Image = "peaceful".Equals(Difficulty)
                 ? Properties.Resources.peacefullDifficulty
                 : Properties.Resources.peacefullDifficultyLow;
-            difficultyDescription.Image = Properties.Resources.difficultyPeacefullDesc;
+            difficultyDescription.Image = PeacefulDone
+                ? Properties.Resources.difficultyPeacefullDescDone
+                : Properties.Resources.difficultyPeacefullDesc;
         }
 
         private void peacefulDifficulty_MouseLeave(object sender, EventArgs e)
         {
             DisplaySelectedDifficulty();
-            
         }
 
         private void easyDifficulty_Click(object sender, EventArgs e)
@@ -62,7 +67,9 @@ namespace Projet_Purple
             easyDifficulty.Image = "easy".Equals(Difficulty)
                 ? Properties.Resources.easyDifficulty
                 : Properties.Resources.easyDifficultyLow;
-            difficultyDescription.Image = Properties.Resources.difficultyEasyDesc;
+            difficultyDescription.Image = EasyDone
+                ? Properties.Resources.difficultyEasyDescDone
+                : Properties.Resources.difficultyEasyDesc;
         }
 
         private void easyDifficulty_MouseLeave(object sender, EventArgs e)
@@ -81,7 +88,9 @@ namespace Projet_Purple
             mediumDifficulty.Image = "medium".Equals(Difficulty)
                 ? Properties.Resources.mediumDifficulty
                 : Properties.Resources.mediumDifficultyLow;
-            difficultyDescription.Image = Properties.Resources.difficultyMediumDesc;
+            difficultyDescription.Image = MediumDone
+                ? Properties.Resources.difficultyMediumDescDone
+                : Properties.Resources.difficultyMediumDesc;
         }
 
         private void mediumDifficulty_MouseLeave(object sender, EventArgs e)
@@ -105,8 +114,11 @@ namespace Projet_Purple
                 hardDifficulty.Image = "hard".Equals(Difficulty)
                     ? Properties.Resources.hardDifficulty
                     : Properties.Resources.hardDifficultyLow;
-                difficultyDescription.Image = Properties.Resources.difficultyHardDesc;
-            } else
+                difficultyDescription.Image = HardDone
+                    ? Properties.Resources.difficultyHardDescDone
+                    : Properties.Resources.difficultyHardDesc;
+            }
+            else
             {
                 hardDifficulty.Image = Properties.Resources.hardDifficultyLocked;
                 difficultyDescription.Image = Properties.Resources.difficultyHardLockedDesc;
@@ -117,8 +129,8 @@ namespace Projet_Purple
         {
             DisplaySelectedDifficulty();
         }
-        
-         private void DisplaySelectedDifficulty()
+
+        private void DisplaySelectedDifficulty()
         {
             switch (Difficulty)
             {
@@ -129,7 +141,9 @@ namespace Projet_Purple
                     hardDifficulty.Image = HardUnlocked
                         ? Properties.Resources.hardDifficultyGray
                         : Properties.Resources.hardDifficultyLocked;
-                    difficultyDescription.Image = Properties.Resources.difficultyPeacefullDesc;
+                    difficultyDescription.Image = PeacefulDone
+                        ? Properties.Resources.difficultyPeacefullDescDone
+                        : Properties.Resources.difficultyPeacefullDesc;
                     break;
                 case "easy":
                     peacefulDifficulty.Image = Properties.Resources.peacefullDifficultyGray;
@@ -138,7 +152,9 @@ namespace Projet_Purple
                     hardDifficulty.Image = HardUnlocked
                         ? Properties.Resources.hardDifficultyGray
                         : Properties.Resources.hardDifficultyLocked;
-                    difficultyDescription.Image = Properties.Resources.difficultyEasyDesc;
+                    difficultyDescription.Image = EasyDone
+                        ? Properties.Resources.difficultyEasyDescDone
+                        : Properties.Resources.difficultyEasyDesc;
                     break;
                 case "medium":
                     peacefulDifficulty.Image = Properties.Resources.peacefullDifficultyGray;
@@ -147,14 +163,18 @@ namespace Projet_Purple
                     hardDifficulty.Image = HardUnlocked
                         ? Properties.Resources.hardDifficultyGray
                         : Properties.Resources.hardDifficultyLocked;
-                    difficultyDescription.Image = Properties.Resources.difficultyMediumDesc;
+                    difficultyDescription.Image = MediumDone
+                        ? Properties.Resources.difficultyMediumDescDone
+                        : Properties.Resources.difficultyMediumDesc;
                     break;
                 case "hard":
                     peacefulDifficulty.Image = Properties.Resources.peacefullDifficultyGray;
                     easyDifficulty.Image = Properties.Resources.easyDifficultyGray;
                     mediumDifficulty.Image = Properties.Resources.mediumDifficultyGray;
                     hardDifficulty.Image = Properties.Resources.hardDifficulty;
-                    difficultyDescription.Image = Properties.Resources.difficultyHardDesc;
+                    difficultyDescription.Image = HardDone
+                        ? Properties.Resources.difficultyHardDescDone
+                        : Properties.Resources.difficultyHardDesc;
                     break;
             }
         }

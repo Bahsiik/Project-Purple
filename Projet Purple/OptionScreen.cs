@@ -21,6 +21,11 @@ namespace Projet_Purple
                 BylethM.Image = Properties.Resources.bylethPortraitGray;
                 BylethF.Image = Properties.Resources.bylethFPortrait;
             }
+            
+            if (ChangeDifficultyScreen.HardDone)
+            {
+                BackgroundImage = Properties.Resources.titleBackground2Blur;
+            }
         }
 
         private void BylethM_Click(object sender, EventArgs e)

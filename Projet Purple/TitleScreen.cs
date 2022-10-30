@@ -10,6 +10,10 @@ namespace Projet_Purple
         public TitleScreen()
         {
             InitializeComponent();
+            if (ChangeDifficultyScreen.HardDone)
+            {
+                BackgroundImage = Properties.Resources.titleBackground2;
+            }
         }
 
         private void StartGame(object sender, EventArgs e)

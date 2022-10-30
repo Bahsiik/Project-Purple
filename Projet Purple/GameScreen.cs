@@ -20,38 +20,10 @@ namespace Projet_Purple
             _verticalPlatformLocation = verticalPlatform.Location;
             _horizontalPlatformLocation = horizontalPlatform.Location;
             
-            switch (ChangeDifficultyScreen.Difficulty)
-            {
-                case "peaceful":
-                    easyEnemy.Visible = false;
-                    mediumEnemy.Visible = false;
-                    hardEnemy.Visible = false;
-                    break;
-                case "easy":
-                    easyEnemy.Visible = true;
-                    mediumEnemy.Visible = true;
-                    hardEnemy.Visible = false;
-                    _easyEnemySpeed = 1;
-                    _mediumEnemySpeed = 2;
-                    break;
-                case "medium":
-                    easyEnemy.Visible = true;
-                    mediumEnemy.Visible = true;
-                    hardEnemy.Visible = true;
-                    _easyEnemySpeed = 2;
-                    _mediumEnemySpeed = 3;
-                    _hardEnemySpeed = 4;
-                    break;
-                case "hard":
-                    easyEnemy.Visible = true;
-                    mediumEnemy.Visible = true;
-                    hardEnemy.Visible = true;
-                    _easyEnemySpeed = 4;
-                    _mediumEnemySpeed = 5;
-                    _hardEnemySpeed = 6;
-                    break;
-            }
+            DifficultyManagement();
         }
+
+        
 
         // Player variables
         private bool _goLeft, _goRight, _jumping, _onGround, _animRight, _animLeft, _animIdle;
@@ -165,6 +137,7 @@ namespace Projet_Purple
                 {
                     _win = true;
                     gameTimer.Stop();
+                    DifficultiesDoneManagement();
                     var winScreen = new WinScreen();
                     winScreen.Show();
                     Hide();
@@ -222,6 +195,65 @@ namespace Projet_Purple
                 {
                     CrestAppearAnimation();
                 }
+            }
+        }
+
+        private static void DifficultiesDoneManagement()
+        {
+            switch (ChangeDifficultyScreen.Difficulty)
+            {
+                case "peaceful":
+                    ChangeDifficultyScreen.PeacefulDone = true;
+                    break;
+                case "easy":
+                    ChangeDifficultyScreen.EasyDone = true;
+                    break;
+                case "medium":
+                    ChangeDifficultyScreen.MediumDone = true;
+                    break;
+                case "hard":
+                    ChangeDifficultyScreen.HardDone = true;
+                    break;
+            }
+
+            if (ChangeDifficultyScreen.PeacefulDone && ChangeDifficultyScreen.EasyDone && ChangeDifficultyScreen.MediumDone)
+            {
+                ChangeDifficultyScreen.HardUnlocked = true;
+            }
+        }
+
+        private void DifficultyManagement()
+        {
+            switch (ChangeDifficultyScreen.Difficulty)
+            {
+                case "peaceful":
+                    easyEnemy.Visible = false;
+                    mediumEnemy.Visible = false;
+                    hardEnemy.Visible = false;
+                    break;
+                case "easy":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = false;
+                    _easyEnemySpeed = 1;
+                    _mediumEnemySpeed = 2;
+                    break;
+                case "medium":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = true;
+                    _easyEnemySpeed = 2;
+                    _mediumEnemySpeed = 3;
+                    _hardEnemySpeed = 4;
+                    break;
+                case "hard":
+                    easyEnemy.Visible = true;
+                    mediumEnemy.Visible = true;
+                    hardEnemy.Visible = true;
+                    _easyEnemySpeed = 4;
+                    _mediumEnemySpeed = 5;
+                    _hardEnemySpeed = 6;
+                    break;
             }
         }
 

@@ -177,10 +177,17 @@
       <Content Include="Resources\Crest_of_Flames.png" />
       <Content Include="Resources\deathFrame.png" />
       <Content Include="Resources\difficultyEasyDesc.png" />
+      <Content Include="Resources\difficultyEasyDescDone.png" />
       <Content Include="Resources\difficultyHardDesc.png" />
+      <Content Include="Resources\difficultyHardDescDone.png" />
       <Content Include="Resources\difficultyHardLockedDesc.png" />
       <Content Include="Resources\difficultyMediumDesc.png" />
+      <Content Include="Resources\difficultyMediumDescDone.png" />
       <Content Include="Resources\difficultyPeacefullDesc.png" />
+      <Content Include="Resources\difficultyPeacefullDesc1.png" />
+      <Content Include="Resources\difficultyPeacefullDesc2.png" />
+      <Content Include="Resources\difficultyPeacefullDescDone.png" />
+      <Content Include="Resources\difficultyPeacefullDescDone1.png" />
       <Content Include="Resources\easyDifficulty.png" />
       <Content Include="Resources\easyDifficultyGray.png" />
       <Content Include="Resources\easyDifficultyLow.png" />
